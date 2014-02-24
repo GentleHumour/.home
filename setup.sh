@@ -4,7 +4,7 @@
 #------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
-# Line to insert into ~/.bashrc.
+# Insert a line into ~/.bashrc to source the rest of the config.
 
 SOURCE=". ~/.home/.bashrc.source"
 if ! grep "$SOURCE" ~/.bashrc >&/dev/null; then
@@ -14,12 +14,15 @@ fi
 
 #------------------------------------------------------------------------------
 # Set up symlinks.
+#
+# Anything under ~/.home/links gets linked into the corresponding subdirectory
+# of ~.
 
 ESC_RED='\e[31;1m'
 ESC_RST='\e[0m'
 ESC_GRN='\e[32;1m'
 
-cd $HOME/.home/links && find . -type f | while read LINK; do
+cd $HOME/.home/links && find . -type f | grep -v '~' | while read LINK; do
     RELATIVE=${LINK#./}
     DIR=~/$(dirname "$RELATIVE")
     if [ ! -d "$DIR" ]; then
