@@ -1,0 +1,4 @@
+export JACK_VERSION=0.100.0
+export JACK_HOME=/opt/jack-$JACK_VERSION
+export PATH="$PATH:$JACK_HOME/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JACK_HOME/lib"

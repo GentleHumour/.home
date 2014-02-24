@@ -1,0 +1,11 @@
+set morespace
+set smooth
+set tabsize 8
+set nowrap
+
+include "/usr/share/nano/nanorc.nanorc"
+include "/usr/share/nano/c.nanorc"
+include "/usr/share/nano/java.nanorc"
+include "/usr/share/nano/python.nanorc"
+include "/usr/share/nano/html.nanorc"
+include "/usr/share/nano/sh.nanorc"

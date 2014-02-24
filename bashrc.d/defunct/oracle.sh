@@ -1,0 +1,4 @@
+export ORACLE_BASE=/opt/oracle-10.1
+export ORACLE_HOME=$ORACLE_BASE/Oracle
+export PATH=$PATH:$ORACLE_HOME/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME/lib

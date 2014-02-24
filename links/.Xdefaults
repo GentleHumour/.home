@@ -1,0 +1,23 @@
+xterm*background:		black
+xterm*foreground:		white
+xterm*saveLines:		10000
+xterm*geometry:			80x50
+xterm*scrollBar:		true
+#xterm*scrollBar_right:		true
+xterm*reverseWrap:		true
+
+rxvt.background:		black
+rxvt.foreground:		white
+rxvt.saveLines:			10000
+rxvt.geometry:			80x50
+rxvt.font:			"Lucida Console-12"
+rxvt.scrollBar_right:		true
+
+gnome-terminal*geometry:	80x50
+gnome-terminal.geometry:	80x50
+
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.antialias: true
+Xft.rgba: none
+Xft.dpi: 96

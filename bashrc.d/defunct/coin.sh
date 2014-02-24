@@ -1,0 +1,5 @@
+export COIN_VERSION=2.4.3
+export COIN_DIR=/opt/coin-$COIN_VERSION
+export PATH="$COIN_DIR/bin:$PATH"
+export LD_LIBRARY_PATH="$COIN_DIR/lib:$LD_LIBRARY_PATH"
+export MANPATH="$MANPATH:$COIN_DIR/man"

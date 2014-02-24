@@ -1,0 +1,3 @@
+export PYTHONDIR=/opt/python-2.3.5
+export PATH="$PYTHONDIR/bin:$PATH"
+export LD_LIBRARY_PATH="$PYTHONDIR/lib:$LD_LIBRARY_PATH"

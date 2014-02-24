@@ -1,0 +1,4 @@
+export FFTW_VERSION=3.0.1
+export FFTW_HOME=/opt/fftw-$FFTW_VERSION
+export PATH="$PATH:$FFTW_HOME/bin"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$FFTW_HOME/lib"

@@ -1,0 +1,2 @@
+export BOOST_HOME=/opt/boost_1_33_1
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$BOOST_HOME/lib"

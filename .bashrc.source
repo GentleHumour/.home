@@ -1,0 +1,14 @@
+#------------------------------------------------------------------------------
+# Run optional setup scripts.
+#
+# On some Windows setups, $HOME == "C:\Documents and Settings\username" 
+# which is tricky to quote, so use pushd to finesse it away.  Test exit 
+# code of pushd to see whether ~/.bashrc.d/ exists.
+
+if pushd "$HOME"/.home/bashrc.d >& /dev/null; then
+  # If .home/bashrc.d/ is empty, ls will complain, so send stderr to /dev/null.
+  for f in `ls *.sh 2>/dev/null`; do 
+    . $f
+  done
+  popd >& /dev/null
+fi

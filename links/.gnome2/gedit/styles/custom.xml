@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<style-scheme id="silver" _name="Silver" version="1.0">
+
+  <author>David Silver</author>
+  <_description>A colour scheme based on my old BC++/VC++ colours.</_description>
+
+  <!-- Palette -->
+  <color name="red"                         value="#ff0000"/>
+  <color name="orange"                      value="#ffa000"/>
+  <color name="yellow"                      value="#ffff00"/>
+  <color name="green"                       value="#00ff00"/>
+  <color name="blue"                        value="#0000ff"/>
+  <color name="cyan"                        value="#00ffff"/>
+  <color name="magenta"                     value="#ff00ff"/>
+  <color name="darkblue"                    value="#000060"/>
+  <color name="verydarkblue"                value="#000020"/>
+  <color name="verydarkgrey"                value="#404040"/>
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="#white"     background="#black"/>
+  <style name="selection"                   foreground="#black"     background="#lightgray"/>
+  <style name="cursor"                      foreground="#white"/>
+  <style name="current-line"                                        background="verydarkblue"/>
+  <style name="line-numbers"                foreground="#lightgray" background="verydarkgrey"/>
+
+  <!-- Bracket Matching -->
+  <style name="bracket-match"               foreground="magenta"    background="verydarkgray" bold="true"/>
+  <style name="bracket-mismatch"            foreground="#white"     background="red"          bold="true"/>
+
+  <!-- Right Margin -->
+  <style name="right-margin"                foreground="#lightgray" background="verydarkgray"/>
+  
+  <!-- Search Matching -->
+  <style name="search-match"                foreground="#white"     background="darkblue"/>
+
+  <!-- Comments -->
+  <style name="def:comment"                 foreground="red"/>
+  <style name="def:sheband"                 foreground="orange"     bold="true"/>
+  <style name="def:doc-comment-element"     foreground="yellow"     italic="true"/>
+
+  <!-- Constants -->
+  <style name="def:constant"                foreground="green"/>
+  <style name="def:string"                  foreground="magenta"/>
+  <style name="def:special-char"            foreground="magenta"/>
+  <style name="def:special-constant"        foreground="magenta"/>
+  <style name="def:floating-point"          foreground="green"/>
+
+  <!-- Identifiers -->
+  <style name="def:identifier"              foreground="cyan"/>
+
+  <!-- Statements -->
+  <style name="def:statement"               foreground="yellow"     bold="true"/>
+
+  <!-- Types -->
+  <style name="def:type"                    foreground="cyan"       bold="true"/> 
+
+  <!-- Others -->
+  <style name="def:preprocessor"            foreground="yellow"     background="darkblue"/>
+  <style name="def:error"                   foreground="white"      background="red"           bold="true"/>
+  <style name="def:note"                    foreground="#lightgray" background="#black"        bold="true"/>
+  <style name="def:underlined"              italic="true" underline="true"/>
+
+  <!-- Language specific (TBD) -->
+  <style name="diff:added-line"             foreground="orange"/>
+  <style name="diff:removed-line"           foreground="orange"/>
+  <style name="diff:changed-line"           foreground="oraange"/>
+  <style name="diff:diff-file"              foreground="orange" bold="true"/> 
+  <style name="diff:location"               foreground="orange"/> 
+  <style name="diff:special-case"           foreground="#white" bold="true"/>
+
+  <style name="xml:tags"                    foreground="yellow"/>
+  <style name="xml:attribute-name"          foreground="cyan"/>
+
+</style-scheme>
+
