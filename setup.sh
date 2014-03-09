@@ -38,7 +38,7 @@ cd $HOME/.home/links && find . -type f | grep -v '~' | while read LINK; do
             echo -n "UPDATED  "
         fi
         if ln -fs ~/".home/links/$RELATIVE" ~/"$RELATIVE" >&/dev/null; then
-            echo -e "$ESC_GRN~/$RELATIVE  $ESC_RST--->  $ESC_GRN~/.home/link/$RELATIVE$ESC_RST"
+            echo -e "$ESC_GRN~/$RELATIVE  $ESC_RST--->  $ESC_GRN~/.home/links/$RELATIVE$ESC_RST"
         else
             echo -e "$ESC_REDFailed to update link ~/$RELATIVE$ESC_RST"
         fi
