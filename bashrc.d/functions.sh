@@ -56,7 +56,7 @@ __search()
     return
   fi
 
-  find "$DIR" -iname "$GLOB" -exec egrep $CASE_ARG "$PATTERN" {} /dev/null \;
+  find -L "$DIR" -iname "$GLOB" -exec egrep $CASE_ARG "$PATTERN" {} /dev/null \;
 }
 
 #------------------------------------------------------------------------------
