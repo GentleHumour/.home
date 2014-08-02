@@ -1,6 +1,7 @@
 #!/bin/bash
 #------------------------------------------------------------------------------
 # Patch ~/.bashrc and install symlinks to configuration in ~ and subdirectories.
+# Also run setup scripts in ~/.home/setup.d/.
 #------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -44,4 +45,14 @@ cd $HOME/.home/links && find . -type f | grep -v '~' | while read LINK; do
         fi
     fi
 done
+
+#------------------------------------------------------------------------------
+# Run setup scripts.
+
+if pushd "$HOME"/.home/setup.d >& /dev/null; then
+  for f in `ls *.sh 2>/dev/null`; do 
+    . $f
+  done
+  popd >& /dev/null
+fi
 
