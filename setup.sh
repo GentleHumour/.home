@@ -27,8 +27,8 @@ cd $HOME/.home/links && find . -type f | grep -v '~' | while read LINK; do
     RELATIVE=${LINK#./}
     DIR=~/$(dirname "$RELATIVE")
     if [ ! -d "$DIR" ]; then
-        mkdir $DIR && echo "Created directory $DIR" \
-                   || echo -e "$ESC_REDFailed to create directory $DIR$ESC_RST"
+        mkdir $DIR 2>/dev/null && echo "Created directory $DIR" \
+                   || echo -e "${ESC_RED}Failed to create directory $DIR$ESC_RST"
     fi
     if [ -f "$HOME/$RELATIVE" -a ! -L "$HOME/$RELATIVE" ]; then
         echo -e "$ESC_RED\"~/$RELATIVE\" already exists as an ordinary file.$ESC_RST"
@@ -41,7 +41,7 @@ cd $HOME/.home/links && find . -type f | grep -v '~' | while read LINK; do
         if ln -fs ~/".home/links/$RELATIVE" ~/"$RELATIVE" >&/dev/null; then
             echo -e "$ESC_GRN~/$RELATIVE  $ESC_RST--->  $ESC_GRN~/.home/links/$RELATIVE$ESC_RST"
         else
-            echo -e "$ESC_REDFailed to update link ~/$RELATIVE$ESC_RST"
+            echo -e "${ESC_RED}Failed to update link ~/$RELATIVE$ESC_RST"
         fi
     fi
 done
