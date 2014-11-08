@@ -27,7 +27,7 @@ cd $HOME/.home/links && find . -type f | grep -v '~' | while read LINK; do
     RELATIVE=${LINK#./}
     DIR=~/$(dirname "$RELATIVE")
     if [ ! -d "$DIR" ]; then
-        mkdir $DIR 2>/dev/null && echo "Created directory $DIR" \
+        mkdir -p "$DIR" 2>/dev/null && echo "Created directory $DIR" \
                    || echo -e "${ESC_RED}Failed to create directory $DIR$ESC_RST"
     fi
     if [ -f "$HOME/$RELATIVE" -a ! -L "$HOME/$RELATIVE" ]; then
