@@ -1,11 +1,26 @@
-set morespace
-set smooth
-set tabsize 8
-set nowrap
-
 include "/usr/share/nano/nanorc.nanorc"
 include "/usr/share/nano/c.nanorc"
 include "/usr/share/nano/java.nanorc"
 include "/usr/share/nano/python.nanorc"
+include "/usr/share/nano/ruby.nanorc"
 include "/usr/share/nano/html.nanorc"
+include "/usr/share/nano/xml.nanorc"
 include "/usr/share/nano/sh.nanorc"
+include "/usr/share/nano/makefile.nanorc"
+include "/usr/share/nano/awk.nanorc"
+include "/usr/share/nano/patch.nanorc"
+
+set morespace
+set smooth
+set nowrap
+set const
+set backup
+set undo
+set smarthome
+set tabsize 4
+
+unset suspend
+
+bind ^Z undo all
+bind ^Y redo all
+
