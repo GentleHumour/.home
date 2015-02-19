@@ -22,3 +22,4 @@ else
   export APPROOT=/opt
 fi
 
+export VISUAL="$EDITOR"
