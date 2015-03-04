@@ -56,7 +56,7 @@ __search()
     return
   fi
 
-  find -L "$DIR" -iname "$GLOB" -exec egrep $CASE_ARG "$PATTERN" {} /dev/null \;
+  find -L "$DIR" -type f -a -iname "$GLOB" -exec egrep $CASE_ARG "$PATTERN" {} /dev/null \;
 }
 
 #------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ __search()
 
 search() 
 { 
-  __search ${FUNCNAME[0]} "$@" 
+  __search ${FUNCNAME[0]} "$@"
 }
 isearch() 
 {
