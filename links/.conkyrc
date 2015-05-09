@@ -1,5 +1,5 @@
 # Startup: fork to background process.
-background yes
+#background yes
 
 # Updates.
 update_interval 1
@@ -55,7 +55,7 @@ xftalpha 0.1
 # Text formatting.
 short_units yes
 text_buffer_size 2048
-
+z
 TEXT
 ${color2}${font OpenLogos:size=80}N${voffset -200}
 ${color2}${font Monospace:size=14}${goto 100}$nodename${font}
@@ -68,7 +68,25 @@ ${color1}${goto 100}${font Monospace:size=12}${time %A %B %d, %Y}
 ${color0}$hr${voffset 5}
 ${color2}${goto 10}Uptime:${goto 100}${color1}${uptime}${voffset 5}
 ${color2}${goto 10}Load:${goto 100}${color1}${loadavg}${voffset 10}
-${color2}${goto 10}CPU:${goto 100}${color1}${voffset -10}${cpugraph 804000 ff8000}${offset -120}${voffset 10}${color1}${cpu}%${color0}${voffset -11}
+# For the battery device name, look in: /sys/class/power_supply/
+${color2}${goto 10}Battery:${goto 100}\
+${if_match ${battery_percent BAT1} == 100}\
+    ${color1}\
+${endif}\
+${if_match ${battery_percent BAT1} < 100}\
+    ${color green}\
+${endif}\
+${if_match ${battery_percent BAT1} < 80}\
+    ${color yellow}\
+${endif}\
+${if_match ${battery_percent BAT1} < 60}\
+    ${color #ff4000}\
+${endif}\
+${if_match ${battery_percent BAT1} < 40}\
+    ${color red}\
+${endif}\
+${voffset 1}${goto 100}${battery_bar 4 BAT1}${offset -200}${voffset 10}${color1}${voffset 4}${battery_percent BAT1}%${color0}${voffset 5}
+${color2}${goto 10}CPU:${goto 100}${color1}${voffset -10}${cpugraph 804000 ff8000}${offset -200}${voffset 10}${color1}${cpu}%${color0}${voffset -11}
 ${color2}${goto 10}RAM:${goto 100}$color1$memperc%${goto 170}${membar 4}
 ${color0}${goto 10}         $color1           $mem / $memmax
 ${color2}${goto 10}Swap:${goto 100}${color1}$swapperc%${goto 170}${swapbar 4} 
