@@ -2,7 +2,7 @@
 background yes
 
 # Updates.
-update_interval 5
+update_interval 1
 total_run_times 0
 cpu_avg_samples 2
 net_avg_samples 2
@@ -74,7 +74,7 @@ ${color0}${goto 10}         $color1           $mem / $memmax
 ${color2}${goto 10}Swap:${goto 100}${color1}$swapperc%${goto 170}${swapbar 4} 
 ${color0}${goto 10}         $color1           $swap / $swapmax ${voffset 5}
 ${color2}${goto 10}CPU:${goto 100}$color1${execi 120 sensors | grep 'Core 0' | sed -e 's/.*: *+//g' -e 's/\..*//g'}°C\
-${color2}${goto 250}GPU:${goto 325}$color1${execi 120 cat ~/.gputemp; nohup optirun nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader > ~/.gputemp &}°C${voffset 5}
+${color2}${goto 250}GPU:${goto 325}$color1${execi 120 cat ~/.conky/gputemp; nohup optirun nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader > ~/.conky/gputemp &}°C${voffset 5}
 ${color2}${goto 10}sda: ${color1}${goto 100}${execi 120 hddtemp -n /dev/sda}°C\
 ${goto 250}${color2}sdb: ${color1}${goto 325}${execi 120 hddtemp -n /dev/sdb}°C
 ${if_match "$gw_iface"=="(null)"}\q
@@ -85,7 +85,7 @@ ${if_match "$gw_iface" == "p4p1"}
     ${color2}${goto 10}p4p1:\
     ${color0}${voffset -6}${goto 100}${font Monospace:size=14}▲${font} \
     ${goto 150}${upspeedgraph p4p1 15,90 004000 00ff00} \
-    $color1${goto 160}${upspeed p4p1}${color0} ${color1}$alignr
+    $color1${goto 160}${upspeed p4p1}${color0} ${color1}$alignr${execi 240 cat ~/.conky/ip-address; nohup curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' > ~/.conky/ip-address &}
     ${color0}${goto 100}${font Monospace:size=14}▼${font} \
     ${goto 150}${downspeedgraph p4p1 15,90 400000 ff0000} \
     $color1${goto 160}${downspeed eth0}${color0}   ${color1}$alignr${addr p4p1}
