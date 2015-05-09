@@ -67,16 +67,16 @@ ${color2}${goto 100}${font Monospace:size=32}${time %H:%M}${font Monospace:size=
 ${color1}${goto 100}${font Monospace:size=12}${time %A %B %d, %Y}
 ${color0}$hr${voffset 5}
 ${color2}${goto 10}Uptime:${goto 100}${color1}${uptime}${voffset 5}
-${color2}${goto 10}Load:${goto 100}${color1}${loadavg}${voffset 7}
+${color2}${goto 10}Load:${goto 100}${color1}${loadavg}${voffset 10}
 ${color2}${goto 10}CPU:${goto 100}${color1}${voffset -10}${cpugraph 804000 ff8000}${offset -120}${voffset 10}${color1}${cpu}%${color0}${voffset -11}
 ${color2}${goto 10}RAM:${goto 100}$color1$memperc%${goto 170}${membar 4}
 ${color0}${goto 10}         $color1           $mem / $memmax
 ${color2}${goto 10}Swap:${goto 100}${color1}$swapperc%${goto 170}${swapbar 4} 
 ${color0}${goto 10}         $color1           $swap / $swapmax ${voffset 5}
 ${color2}${goto 10}CPU:${goto 100}$color1${execi 120 sensors | grep 'Core 0' | sed -e 's/.*: *+//g' -e 's/\..*//g'}°C\
-${color2}${goto 250}GPU:${goto 325}$color1${execi 120 cat ~/.conky/gputemp; nohup optirun nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader > ~/.conky/gputemp &}°C${voffset 5}
-${color2}${goto 10}sda: ${color1}${goto 100}${execi 120 hddtemp -n /dev/sda}°C\
-${goto 250}${color2}sdb: ${color1}${goto 325}${execi 120 hddtemp -n /dev/sdb}°C
+${goto 200}${color2}/dev/sda: ${color1}${goto 350}${execi 120 hddtemp -n /dev/sda}°C${voffset 5}
+${color2}${goto 10}GPU:${goto 100}$color1${execi 120 cat ~/.conky/gputemp; nohup optirun nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader > ~/.conky/gputemp &}°C \
+${goto 200}${color2}/dev/sdb: ${color1}${goto 350}${execi 120 hddtemp -n /dev/sdb}°C
 ${if_match "$gw_iface"=="(null)"}\q
     ${color2}${goto 10}Network unavailable
 ${endif}\
