@@ -1,5 +1,5 @@
 # Startup: fork to background process.
-#background yes
+background yes
 
 # Updates.
 update_interval 1
@@ -45,7 +45,7 @@ default_outline_color ffffff
 default_shade_color 000000
 
 # Font.
-# Fixes up alightment of RAM & Swap usage / max. Needed with mono font.
+# Fixes up alignment of RAM & Swap usage / max. Needed with mono font.
 use_spacer right
 use_xft yes
 font Monospace:size=12
