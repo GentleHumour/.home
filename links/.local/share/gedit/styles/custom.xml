@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<style-scheme id="silver" _name="Silver" version="1.0">
+<style-scheme id="OldSkool" _name="OldSkool" version="1.0">
 
-  <author>D. L. Silver</author>
+  <author>DLS</author>
   <_description>A colour scheme based on my old BC++/VC++ colours.</_description>
 
   <!-- Palette -->
