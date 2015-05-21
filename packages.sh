@@ -73,5 +73,8 @@ PACKAGES="$PACKAGES hunspell hunspell-en hunspell-en-GB"
 # Octave.
 PACKAGES="$PACKAGES octave octave-audio octave-doc octave-general octave-image octave-quaternion octave-signal plplot-octave"
 
+# LaTeX.
+PACKAGES="$PACKAGES kile"
+
 sudo yum -y install $PACKAGES
-PACKAGES=
+
