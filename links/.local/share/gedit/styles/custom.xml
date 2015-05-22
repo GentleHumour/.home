@@ -60,6 +60,7 @@
   <style name="def:error"                   foreground="white"      background="red"           bold="true"/>
   <style name="def:note"                    foreground="#lightgray" background="#black"        bold="true"/>
   <style name="def:underlined"              italic="true" underline="true"/>
+  <style name="operator"                    foreground="yellow"/>
 
   <!-- Language specific (TBD) -->
   <style name="diff:added-line"             foreground="orange"/>
