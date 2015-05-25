@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Minecraft
-Exec=bash -c "cd $HOME/.minecraft/client && java -jar launcher.jar"
+Exec=bash -c "cd $HOME/.minecraft/client && optirun java -jar launcher.jar"
 Icon=/opt/minecraft/favicon.png
 Type=Application
 Categories=Game;
