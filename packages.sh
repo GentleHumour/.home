@@ -52,6 +52,14 @@ PACKAGES="$PACKAGES gstreamer gstreamer-plugins-good gstreamer-plugins-bad gstre
 # FFMpeg.
 PACKAGES="$PACKAGES ffmpeg ffmpeg-libs gstreamer-ffmpeg"
 
+# Mumble.
+PACKAGES="$PACKAGES openssl-devel libsndfile-devel alsa-lib-devel protobuf-compiler protobuf-devel boost-devel"
+PACKAGES="$PACKAGES avahi-compat-libdns_sd-devel speech-dispatcher-devel libdaemon-devel libusb-devel"
+PACKAGES="$PACKAGES ice-3.4 ice-devel libcap-devel"
+
+# PulseAudio.
+PACKAGES="$PACKAGES pavucontrol"
+
 # Moldy media.
 PACKAGES="$PACKAGES libdvdcss vlc mplayer mplayer-gui smplayer gnome-mplayer"
 
