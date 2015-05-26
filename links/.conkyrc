@@ -107,7 +107,7 @@ ${if_match "$gw_iface" == "p4p1"}
     $color1${goto 160}${upspeed p4p1}${color0} ${color1}$alignr${execi 240 cat ~/.conky/ip-address; nohup curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' > ~/.conky/ip-address &}
     ${color0}${goto 100}${font Monospace:size=14}▼${font} \
     ${goto 150}${downspeedgraph p4p1 15,90 400000 ff0000} \
-    $color1${goto 160}${downspeed eth0}${color0}   ${color1}$alignr${addr p4p1}
+    $color1${goto 160}${downspeed p4p1}${color0}   ${color1}$alignr${addr p4p1}
 ${endif}\
 ${if_match "$gw_iface" == "wlp5s0"}
     ${color2}${goto 10}wlp5s0:\
@@ -116,7 +116,7 @@ ${if_match "$gw_iface" == "wlp5s0"}
     $color1${goto 160}${upspeed wlp5s0}${color0} ${color1}$alignr
     ${color0}${goto 100}${font Monospace:size=14}▼${font} \
     ${goto 150}${downspeedgraph wlp5s0 15,90 400000 ff0000} \
-    $color1${goto 160}${downspeed eth0}${color0}   ${color1}$alignr${addr wlp5s0}
+    $color1${goto 160}${downspeed wlp5s0}${color0}   ${color1}$alignr${addr wlp5s0}
 ${endif}\
 ${if_existing /opt/custom/tmp/status.txt}${color3}${voffset 6}${execi 30 cat /opt/custom/tmp/status.txt}${else}${voffset -20}${endif}
 ${color0}$hr${font Monospace:size=11}
