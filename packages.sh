@@ -28,6 +28,9 @@ PACKAGES=
 sudo yum -y groupinstall "Development Tools" "Development Libraries"
 PACKAGES="$PACKAGES git subversion nano emacs"
 
+# Python.
+PACKAGES="$PACKAGES python3-pip"
+
 # Building kernels.
 PACKAGES="$PACKAGES binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms"
 
@@ -68,6 +71,9 @@ PACKAGES="$PACKAGES audacity-freeworld"
 
 # Video editing.
 PACKAGES="$PACKAGES avidemux"
+
+# Desktop recording.
+PACKAGES="$PACKAGES gtk-recordmydesktop"
 
 # Gimp.
 PACKAGES="$PACKAGES gimp gimp-data-extras gimpfx-foundry gimp-lqr-plugin gimp-resynthesizer gnome-xcf-thumbnailer"
