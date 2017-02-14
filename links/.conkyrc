@@ -59,7 +59,7 @@ text_buffer_size 2048
 TEXT
 ${color2}${font OpenLogos:size=80}N${voffset -200}
 ${color2}${font Monospace:size=14}${goto 100}$nodename${font}
-${color1}${goto 100}${head /etc/issue 1 86400}
+${color1}${goto 100}${exec . /etc/os-release && echo "$PRETTY_NAME"}
 ${color1}${goto 100}${font Monospace:size=10}${exec head /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'}
 ${color1}${goto 100}${font Monospace:size=10}$sysname $kernel
 ${color0}$hr

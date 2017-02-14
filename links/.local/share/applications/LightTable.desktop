@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=LightTable
+Exec=/opt/lighttable-0.8.0-linux/light
+Type=Application
+Categories=Development;

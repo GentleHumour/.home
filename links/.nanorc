@@ -15,7 +15,7 @@ set smooth
 set nowrap
 set const
 set backup
-set undo
+#set undo
 set smarthome
 set tabsize 4
 
