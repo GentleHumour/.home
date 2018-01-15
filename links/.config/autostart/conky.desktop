@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/usr/bin/conky
+Exec=bash -c "sleep 5 && DISPLAY=:0 /usr/bin/conky"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true

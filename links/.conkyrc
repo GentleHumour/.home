@@ -100,14 +100,14 @@ ${if_match "$gw_iface"=="(null)"}\q
     ${color2}${goto 10}Network unavailable
 ${endif}\
 # ${addr ${gw_iface}} and the like don't work. Bah!
-${if_match "$gw_iface" == "p4p1"}
-    ${color2}${goto 10}p4p1:\
+${if_match "$gw_iface" == "enp4s0"}
+    ${color2}${goto 10}enp4s0:\
     ${color0}${voffset -6}${goto 100}${font Monospace:size=14}▲${font} \
-    ${goto 150}${upspeedgraph p4p1 15,90 004000 00ff00} \
-    $color1${goto 160}${upspeed p4p1}${color0} ${color1}$alignr${execi 240 cat ~/.conky/ip-address; nohup curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' > ~/.conky/ip-address &}
+    ${goto 150}${upspeedgraph enp4s0 15,150 004000 00ff00} \
+    $color1${goto 160}${upspeed enp4s0}${color0} ${color1}$alignr${execi 240 cat ~/.conky/ip-address; nohup curl -s checkip.dyndns.org | sed -e 's/.*Current IP Address: //' -e 's/<.*$//' > ~/.conky/ip-address &}
     ${color0}${goto 100}${font Monospace:size=14}▼${font} \
-    ${goto 150}${downspeedgraph p4p1 15,90 400000 ff0000} \
-    $color1${goto 160}${downspeed p4p1}${color0}   ${color1}$alignr${addr p4p1}
+    ${goto 150}${downspeedgraph enp4s0 15,150 400000 ff0000} \
+    $color1${goto 160}${downspeed enp4s0}${color0}   ${color1}$alignr${addr enp4s0}
 ${endif}\
 ${if_match "$gw_iface" == "wlp5s0"}
     ${color2}${goto 10}wlp5s0:\
@@ -118,7 +118,6 @@ ${if_match "$gw_iface" == "wlp5s0"}
     ${goto 150}${downspeedgraph wlp5s0 15,90 400000 ff0000} \
     $color1${goto 160}${downspeed wlp5s0}${color0}   ${color1}$alignr${addr wlp5s0}
 ${endif}\
-${if_existing /opt/custom/tmp/status.txt}${color3}${voffset 6}${execi 30 cat /opt/custom/tmp/status.txt}${else}${voffset -20}${endif}
 ${color0}$hr${font Monospace:size=11}
 ${color2}${goto 10}Running:$color1 ${goto 100}$running_processes/ $processes ${goto 200}    PID    CPU%    MEM%    
 $color1${goto 50}${top name 1}  ${goto 200}${color0}  ${top pid 1}  ${top cpu 1}  ${top mem 1}
