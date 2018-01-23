@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Eclipse Neon
-Exec=/opt/eclipse-neon/eclipse/eclipse
+Exec=bash -c "export GDK_BACKEND=x11; /opt/eclipse-neon/eclipse/eclipse"
 Icon=/opt/eclipse-neon/eclipse/icon.xpm
 Type=Application
 Categories=Development;
