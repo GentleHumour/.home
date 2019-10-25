@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Minecraft
-Exec=bash -c "cd $HOME/.minecraft && optirun minecraft-launcher-2.0.1005/minecraft-launcher.sh"
+Exec=bash -c "cd $HOME/.minecraft && optirun -b primus minecraft-launcher-2.0.1005/minecraft-launcher.sh"
 Icon=/opt/minecraft/favicon.png
 Type=Application
 Categories=Game;

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Eclipse 2019-06
+Exec=bash -c "export GDK_BACKEND=x11; /opt/eclipse/java-2019-06/eclipse/eclipse"
+Icon=/opt/eclipse/java-2019-06/eclipse/icon.xpm
+Type=Application
+Categories=Development;

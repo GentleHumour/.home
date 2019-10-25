@@ -1,2 +1,2 @@
-export PATH=$PATH:~/bin/mark2
+export PATH=$PATH:~/projects/plugins/mark2
 

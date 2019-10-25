@@ -12,17 +12,21 @@ no_buffers no
 # Window.
 own_window yes
 own_window_argb_visual yes
-own_window_argb_value 0
+own_window_argb_value 160
 own_window_colour 000000
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_transparent yes
-own_window_type normal
+
+# Conflicts with own_window_argb* settings:
+#own_window_transparent yes
 
 # Rendering.
 # Amount of spacing from the alignment position (top_right)
-gap_x 10
-gap_y 10
 alignment top_right
+gap_x 20
+gap_y 48
+# Seems to set vertical border size too.
+border_width 10
+
 double_buffer yes
 draw_borders no
 stippled_borders 1
@@ -35,13 +39,13 @@ out_to_console no
 
 # Colours:
 # Default: grey
-# 0: white, 1: 
+# 0: grey, 1: white, 2: orange, 3: red
 default_color a0a0a0
 color0 a0a0a0
 color1 ffffff
 color2 ff8000
 color3 ff0000
-default_outline_color ffffff
+default_outline_color 000000
 default_shade_color 000000
 
 # Font.
@@ -119,7 +123,7 @@ ${if_match "$gw_iface" == "wlp5s0"}
     $color1${goto 160}${downspeed wlp5s0}${color0}   ${color1}$alignr${addr wlp5s0}
 ${endif}\
 ${color0}$hr${font Monospace:size=11}
-${color2}${goto 10}Running:$color1 ${goto 100}$running_processes/ $processes ${goto 200}    PID    CPU%    MEM%    
+${color2}${goto 10}Running:$color1 ${goto 100}$running_processes / $processes ${goto 200}    PID    CPU%    MEM%    
 $color1${goto 50}${top name 1}  ${goto 200}${color0}  ${top pid 1}  ${top cpu 1}  ${top mem 1}
 $color1${goto 50}${top name 2}  ${goto 200}${color0}  ${top pid 2}  ${top cpu 2}  ${top mem 2}
 $color1${goto 50}${top name 3}  ${goto 200}${color0}  ${top pid 3}  ${top cpu 3}  ${top mem 3}
@@ -139,5 +143,5 @@ ${color2}${goto 10}/opt  ${goto 100}$color1${fs_bar 4 /opt}
 ${color1}                ${goto 100}${color0}${fs_used /opt} / ${fs_size /opt}${alignr}${fs_free /opt} free
 ${color2}${goto 10}/boot ${goto 100}$color1${fs_bar 4 /boot}
 ${color1}                ${goto 100}${color0}${fs_used /boot} / ${fs_size /boot}${alignr}${fs_free /boot} free
-${color0}$hr
+${color0}$hr${font Monospace:size=11}
 

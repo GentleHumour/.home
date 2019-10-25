@@ -13,7 +13,7 @@ include "/usr/share/nano/patch.nanorc"
 set morespace
 set smooth
 set nowrap
-set const
+#set const
 set backup
 #set undo
 set smarthome
