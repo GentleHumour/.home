@@ -12,7 +12,7 @@ export PATH=$PATH:~/.home/scripts:~/bin
 #------------------------------------------------------------------------------
 
 export HISTIGNORE="&:ls:[bf]g:history:exit"
-HISTTIMEFORMAT=$(echo -en '%F  %T\t')
+HISTTIMEFORMAT=$(echo -en '%Y-%m-%d  %T\t')
 HISTFILESIZE=100000
 HISTSIZE=100000
 PROMPT_COMMAND='history -a'

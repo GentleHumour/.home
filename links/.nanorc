@@ -18,6 +18,7 @@ set backup
 #set undo
 set smarthome
 set tabsize 4
+set constantshow
 
 unset suspend
 
