@@ -10,18 +10,68 @@ include "/usr/share/nano/makefile.nanorc"
 include "/usr/share/nano/awk.nanorc"
 include "/usr/share/nano/patch.nanorc"
 
-set morespace
+#set nohelp
+set multibuffer
+
+# Note: M-N (Alt-N) toggles line numbers.
+set linenumbers
+set constantshow
 set smooth
 set nowrap
-#set const
 set backup
 #set undo
 set smarthome
 set tabsize 4
-set constantshow
-
 unset suspend
+set zap
+
+set selectedcolor white,cyan
+set titlecolor white,blue
+set numbercolor white,blue
+set statuscolor white,blue
+set keycolor white,cyan
+set functioncolor white,blue
+set errorcolor white,red
+
+unbind ^K all
+unbind ^U all
+unbind ^V all
+unbind ^Y all
+
+bind ^Q exit all
+bind M-H help all
+bind M-H exit help
+bind ^F whereis all
+bind ^G findnext all
+bind ^B wherewas all
+bind ^D findprevious all
+bind ^R replace main
+bind ^W writeout main
+bind ^S savefile main
+
+bind ^K cut all
+bind ^X cut all
+# Newer nano versions use copy and paste instead of copytext and uncut.
+bind ^C copy all
+#bind ^C copytext all
+bind ^V paste all
+#bind ^V uncut all
+# Newer nano uses chopwordleft, not cutwordleft.
+bind ^H chopwordleft all
+#bind ^H cutwordleft all
+
+bind ^P curpos main
+bind ^L gotoline main
+bind ^T gotodir browser
+bind ^Y speller main
 
 bind ^Z undo all
 bind ^Y redo all
+bind M-C cancel all
 
+# Open file and manage buffers.
+bind ^O insert main
+bind M-, prevbuf all
+bind M-. nextbuf all
+bind M-Q discardbuffer all
+bind M-X flipnewbuffer all
