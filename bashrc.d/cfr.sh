@@ -1,5 +1,6 @@
 decompile() {(
-    CP="$HOME/minecraft/Spigot/1.15/api/spigot-api-1.15-R0.1-SNAPSHOT-shaded.jar"
+    SPIGOT_VERSION=1.16.4
+    CP="$HOME/minecraft/Spigot/${SPIGOT_VERSION}/api/spigot-api-${SPIGOT_VERSION}-R0.1-SNAPSHOT-shaded.jar"
 
     if [ $# -ne 1 ]; then
         echo >&2 "Usage: decompile <jarfile>"
@@ -12,5 +13,5 @@ decompile() {(
     fi
 
     jar xf "$JAR"
-    java -jar ~/bin/jars/cfr-0.149.jar --showversion false --renamedupmembers true --outputdir . "$JAR"
+    java -jar ~/bin/jars/cfr-0.150.jar --showversion false --renamedupmembers true --outputdir . "$JAR"
 )}

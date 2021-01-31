@@ -98,7 +98,7 @@ ${color2}${goto 10}Swap:${goto 100}${color1}$swapperc%${goto 170}${swapbar 4}
 ${color0}${goto 10}         $color1           $swap / $swapmax ${voffset 5}
 ${color2}${goto 10}CPU:${goto 100}$color1${execi 120 sensors | grep 'Core 0' | sed -e 's/.*: *+//g' -e 's/\..*//g'}°C\
 ${goto 200}${color2}/dev/sda: ${color1}${goto 350}${execi 120 hddtemp -n /dev/sda}°C${voffset 5}
-${color2}${goto 10}GPU:${goto 100}$color1${execi 120 cat ~/.conky/gputemp; nohup optirun nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader > ~/.conky/gputemp &}°C \
+${color2}${goto 10}GPU:${goto 100}$color1${execi 120 cat ~/.conky/gputemp; nohup nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader > ~/.conky/gputemp &}°C \
 ${goto 200}${color2}/dev/sdb: ${color1}${goto 350}${execi 120 hddtemp -n /dev/sdb}°C
 ${if_match "$gw_iface"=="(null)"}\q
     ${color2}${goto 10}Network unavailable
@@ -133,12 +133,8 @@ $color1${goto 50}${top name 6}  ${goto 200}${color0}  ${top pid 6}  ${top cpu 6}
 ${color0}$hr${font Monospace:size=11}
 ${color2}${goto 10}/     ${goto 100}$color1${fs_bar 4 /}
 ${color1}                ${goto 100}${color0}${fs_used /} / ${fs_size /}${alignr}${fs_free /} free
-${color2}${goto 10}/home ${goto 100}$color1${fs_bar 4 /home}
-${color1}                ${goto 100}${color0}${fs_used /home} / ${fs_size /home}${alignr}${fs_free /home} free
 ${color2}${goto 10}/data ${goto 100}$color1${fs_bar 4 /data}
 ${color1}                ${goto 100}${color0}${fs_used /data} / ${fs_size /data}${alignr}${fs_free /data} free
-${color2}${goto 10}/var  ${goto 100}$color1${fs_bar 4 /var}
-${color1}                ${goto 100}${color0}${fs_used /var} / ${fs_size /var}${alignr}${fs_free /var} free
 ${color2}${goto 10}/opt  ${goto 100}$color1${fs_bar 4 /opt}
 ${color1}                ${goto 100}${color0}${fs_used /opt} / ${fs_size /opt}${alignr}${fs_free /opt} free
 ${color2}${goto 10}/boot ${goto 100}$color1${fs_bar 4 /boot}

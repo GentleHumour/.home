@@ -36,6 +36,7 @@ DOCS_DIR="$API_DIR/docs"
 # ECHO=echo
 
 cd "$BUILD_DIR"
+$ECHO wget -O BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar || die "Failed to update BuildTools."
 $ECHO java -jar BuildTools.jar --rev "$REV" || die "Build failed."
 
 #------------------------------------------------------------------------------
