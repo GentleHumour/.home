@@ -35,14 +35,16 @@ DOCS_DIR="$API_DIR/docs"
 # For testing:
 # ECHO=echo
 
-cd "$BUILD_DIR"
+mkdir -p "$BUILD_DIR" && cd "$BUILD_DIR" || die "Couldn't change to $BUILD_DIR."
+
+# Don't download BuildTools while it is buggy.
 $ECHO wget -O BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar || die "Failed to update BuildTools."
 $ECHO java -jar BuildTools.jar --rev "$REV" || die "Build failed."
 
 #------------------------------------------------------------------------------
 # Copy server JAR renamed with build number.
 
-BUILD_NUMBER=$(head BuildTools.log.txt | grep name | cut -d '"' -f4)
+BUILD_NUMBER=$(head -20 BuildTools.log.txt | grep name | cut -d '"' -f4)
 if [ "$BUILD_NUMBER" == "" ]; then 
     die "Something went wrong. The build number is empty."
 fi
