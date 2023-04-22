@@ -1,0 +1,17 @@
+[/]
+draw-spaces=@as []
+folder-status-filters=['normal', 'normal', 'new', 'modified']
+highlight-syntax=true
+indent-width=4
+insert-spaces-instead-of-tabs=false
+show-line-numbers=true
+style-scheme='solarized-dark'
+window-size=(1715, 749)
+window-state='maximized'
+wrap-mode='none'
+
+[window-state]
+height=1009
+is-fullscreen=false
+is-maximized=true
+width=960

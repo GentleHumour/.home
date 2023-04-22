@@ -1,0 +1,11 @@
+[ui]
+image-gallery=true
+sidebar=false
+statusbar=true
+toolbar=true
+
+[view]
+background-color='rgb(0,0,0)'
+extrapolate=false
+interpolate=false
+use-background-color=true

@@ -1,0 +1,6 @@
+[/]
+logo-always-visible=true
+logo-border=uint32 71
+logo-opacity=uint32 215
+logo-position='top-right'
+logo-size=13.247863247863247

@@ -1,0 +1,18 @@
+[keybindings]
+maximize=['<Super>Up']
+switch-applications=@as []
+switch-applications-backward=@as []
+switch-input-source=['<Super>space', 'XF86Keyboard']
+switch-input-source-backward=['<Shift><Super>space', '<Shift>XF86Keyboard']
+switch-windows=['<Alt>Tab']
+switch-windows-backward=['<Shift><Alt>Tab']
+unmaximize=['<Super>Down', '<Alt>F5']
+
+[preferences]
+button-layout='menu:minimize,maximize,close'
+focus-mode='sloppy'
+focus-new-windows='strict'
+resize-with-right-button=true
+theme='Adwaita'
+titlebar-font='Cantarell Bold 11'
+workspace-names=['Main', 'Stuff']

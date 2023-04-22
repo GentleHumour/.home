@@ -1,0 +1,7 @@
+[/]
+active-plugins=['time', 'docinfo', 'modelines', 'filebrowser', 'spell']
+
+[filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/M-Y-S-E-L-F/projects/plugins/BeastMaster/src/nu/nerd/beastmaster/mobs'

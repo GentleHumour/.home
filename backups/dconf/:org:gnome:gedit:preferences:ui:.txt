@@ -1,0 +1,6 @@
+[/]
+notebook-show-tabs-mode='always'
+show-tabs-mode='auto'
+side-panel-visible=false
+statusbar-visible=true
+toolbar-visible=false

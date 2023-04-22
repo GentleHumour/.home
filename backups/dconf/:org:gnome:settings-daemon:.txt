@@ -1,0 +1,52 @@
+[peripherals/keyboard]
+numlock-state='on'
+
+[peripherals/mouse]
+locate-pointer=false
+
+[plugins/color]
+night-light-enabled=true
+night-light-last-coordinates=(-34.945398560115187, 138.60050000000001)
+night-light-schedule-automatic=true
+night-light-schedule-from=19.0
+night-light-temperature=uint32 2679
+
+[plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+logout=['<Primary><Alt>Delete']
+screensaver=['<Primary><Shift><Alt>l']
+www=['<Super>w']
+
+[plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>t'
+command='/usr/bin/terminator'
+name='Terminal'
+
+[plugins/media-keys/custom-keybindings/custom1]
+binding='<Super>e'
+command='nemo'
+name='File Explorer'
+
+[plugins/media-keys/custom-keybindings/custom2]
+binding='<Super>r'
+command='rhythmbox'
+name='Rhythmbox'
+
+[plugins/media-keys/custom-keybindings/custom3]
+binding='<Super>g'
+command='gedit'
+name='Gedit'
+
+[plugins/power]
+idle-dim=false
+power-button-action='interactive'
+sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-type='nothing'
+sleep-inactive-battery-timeout=1800
+sleep-inactive-battery-type='nothing'
+
+[plugins/updates]
+last-updates-notification=uint64 1435048414
+
+[plugins/xsettings]
+overrides={'Gdk/WindowScalingFactor': <1>}

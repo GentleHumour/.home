@@ -1,0 +1,6 @@
+[/]
+border-effect='none'
+delay=2
+include-border=true
+include-pointer=false
+last-save-directory='file:///home/M-Y-S-E-L-F/Pictures'

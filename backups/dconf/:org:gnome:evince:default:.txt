@@ -1,0 +1,13 @@
+[/]
+continuous=true
+dual-page=false
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=true
+sidebar-page='thumbnails'
+sidebar-size=216
+sizing-mode='free'
+window-ratio=(2.8055555555555554, 1.3017676767676767)
+zoom=0.8661106313133915

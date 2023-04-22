@@ -1,0 +1,20 @@
+[desktop]
+network-icon-visible=true
+volumes-visible=true
+
+[list-view]
+default-column-order=['name', 'permissions', 'owner', 'group', 'size', 'type', 'date_modified', 'date_created_with_time', 'date_accessed', 'date_created', 'detailed_type', 'where', 'mime_type', 'date_modified_with_time', 'octal_permissions', 'selinux_context']
+default-visible-columns=['name', 'permissions', 'owner', 'group', 'size', 'type', 'date_modified', 'selinux_context']
+
+[preferences]
+ignore-view-metadata=true
+quick-renames-with-pause-in-between=true
+show-full-path-titles=true
+show-hidden-files=true
+
+[window-state]
+geometry='1717x839+26+23'
+maximized=false
+sidebar-bookmark-breakpoint=6
+sidebar-width=277
+start-with-sidebar=true

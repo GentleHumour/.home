@@ -1,0 +1,18 @@
+[/]
+auto-indent=true
+auto-save=true
+auto-save-interval=uint32 10
+background-pattern='none'
+bracket-matching=true
+create-backup-copy=true
+display-line-numbers=true
+display-overview-map=true
+display-right-margin=true
+highlight-current-line=true
+insert-spaces=false
+right-margin-position=uint32 60
+scheme='OldSkool'
+tabs-size=uint32 4
+undo-actions-limit=-1
+wrap-last-split-mode='word'
+wrap-mode='word'

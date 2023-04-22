@@ -1,0 +1,35 @@
+[compression]
+default-compression-format='zip'
+
+[desktop]
+network-icon-visible=true
+volumes-visible=true
+
+[icon-view]
+captions=['size', 'none', 'none']
+default-zoom-level='small'
+
+[list-view]
+default-column-order=['name', 'size', 'type', 'date_modified', 'date_accessed', 'owner', 'group', 'permissions', 'where', 'date_modified_with_time', 'recency', 'starred', 'detailed_type']
+default-visible-columns=['name', 'size', 'type', 'date_modified', 'owner', 'group', 'permissions']
+default-zoom-level='standard'
+use-tree-view=true
+
+[preferences]
+always-use-location-entry=true
+default-folder-viewer='list-view'
+enable-delete=true
+migrated-gtk-settings=true
+search-filter-time-type='last_modified'
+search-view='list-view'
+show-create-link=true
+show-delete-permanently=true
+show-image-thumbnails='always'
+show-move-to-trash-shortcut-changed-dialog=false
+sort-directories-first=true
+
+[window-state]
+geometry='1406x814+2115+77'
+initial-size=(1717, 937)
+maximized=false
+sidebar-width=162

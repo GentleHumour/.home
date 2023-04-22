@@ -1,0 +1,12 @@
+[keyboard]
+delay=uint32 324
+numlock-state=false
+repeat-interval=uint32 20
+
+[mouse]
+double-click=400
+speed=-0.55147058823529416
+
+[touchpad]
+send-events='disabled'
+two-finger-scrolling-enabled=true
