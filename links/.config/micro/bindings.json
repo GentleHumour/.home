@@ -1,0 +1,12 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Alt-a": "SelectAll",
+    "Ctrl-H": "DeleteWordLeft",
+    "Ctrl-W": "DeleteWordLeft",
+    "Ctrl-Shift-a": "SelectAll",
+    "Ctrl-a": "StartOfLine",
+    "Ctrl-e": "EndOfLine",
+    "Ctrl-r": "CommandMode",
+    "Ctrl-G": "command-edit:replace",
+    "CtrlUnderscore": "lua:comment.comment"
+}

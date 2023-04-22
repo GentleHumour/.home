@@ -16,7 +16,7 @@ set multibuffer
 # Note: M-N (Alt-N) toggles line numbers.
 set linenumbers
 set constantshow
-set smooth
+#set smooth
 set nowrap
 set backup
 #set undo
@@ -32,6 +32,9 @@ set statuscolor white,blue
 set keycolor white,cyan
 set functioncolor white,blue
 set errorcolor white,red
+
+# https://www.nano-editor.org/dist/latest/nanorc.5.html#REBINDING%20KEYS
+# Rebinding ESC is not supported.
 
 unbind ^K all
 unbind ^U all

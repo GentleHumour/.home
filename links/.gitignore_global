@@ -1,4 +1,10 @@
 *~
 .metadata
 .recommenders
-
+# Breaks BuildTools: BUILDTOOLS-591
+#target
+dependency-reduced-pom.xml
+.classpath
+.project
+.settings
+/classes/

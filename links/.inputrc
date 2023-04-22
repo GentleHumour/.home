@@ -1,2 +1,6 @@
+# Readline configuration. See: info rluserman
 set bell-style none
-set show-all-if-ambiguous On
+set show-all-if-ambiguous on
+set colored-completion-prefix on
+
+"\C-H":"\C-W"
