@@ -41,7 +41,6 @@ dconf dump / | sed "s/$(whoami)/M-Y-S-E-L-F/g" > /data/backups/dconf/$(whoami).t
 mkdir -p "$BACKUPS_DIR"
 
 backup /org/fedorahosted/background-logo-extension
-backup /org/gnome/GWeather
 backup /org/gnome/GWeather4
 backup /org/gnome/calculator
 backup /org/gnome/desktop/calendar
