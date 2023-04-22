@@ -6,6 +6,8 @@
 # this scipt.
 #------------------------------------------------------------------------------
 
+pip3 install gnome-extensions-cli
+
 #------------------------------------------------------------------------------
 # Locally installed user extensions.
 #
@@ -54,7 +56,8 @@ gext -F install ding@rastersoft.com
 gext -F install EasyScreenCast@iacopodeenosee.gmail.com
 
 # Extension List: https://extensions.gnome.org/extension/3088/extension-list/
-gext -F install extension-list@tu.berry
+#gext -F install extension-list@tu.berry
+echo "Please install Extension List through the GNOME website: https://extensions.gnome.org/extension/3088/extension-list/."
 
 # Logo Menu: https://extensions.gnome.org/extension/4451/logo-menu/
 # * Distro logo and drop down menu on the panel.
@@ -84,4 +87,6 @@ gext -F install Vitals@CoreCoding.com
 gext -F install workspace-indicator@gnome-shell-extensions.gcampax.github.com
 
 #------------------------------------------------------------------------------
+# Restore extension settings from backups.
 
+restore-dconf.sh

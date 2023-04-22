@@ -174,10 +174,9 @@ package gnome-shell-extension-just-perfection
 #package gnome-shell-extension-unite
 
 #------------------------------------------------------------------------------
-# Support for installing unpackaged extensions.
+# Python.
 
 sudo dnf install -y python3-pip
-pip3 install gnome-extensions-cli
 
 #------------------------------------------------------------------------------
 # Minecraft and Java programming.
@@ -202,7 +201,8 @@ sudo dnf -y install binutils gcc make patch libgomp glibc-headers glibc-devel ke
 #------------------------------------------------------------------------------
 # General file utilities.
 
-package terminator micro jq nemo meld
+package terminator micro gedit jq meld
+package meld
 package unzip p7zip p7zip-plugins unrar
 
 #------------------------------------------------------------------------------
