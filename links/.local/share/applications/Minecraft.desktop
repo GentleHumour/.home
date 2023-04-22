@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Minecraft
-Exec=bash -c "cd $HOME/.minecraft && __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia minecraft-launcher/minecraft-launcher"
-Icon=/opt/minecraft/favicon.png
+Exec=bash -c "cd $HOME/.minecraft && __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia launcher/minecraft-launcher"
+Icon=Minecraft
 Type=Application
 Categories=Game;

@@ -1,7 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=Eclipse Luna
-Exec=/opt/eclipse-luna/eclipse/eclipse
-Icon=/opt/eclipse-luna/eclipse/icon.xpm
-Type=Application
-Categories=Development;

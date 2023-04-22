@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=PyCharm 2021.1.2
+Exec=bash -c "/home/david/bin/pycharm-community-2021.1.2/bin/pycharm.sh"
+Icon=/home/david/bin/pycharm-community-2021.1.2/bin/pycharm.svg
+Type=Application
+Categories=Development;
