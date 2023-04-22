@@ -10,6 +10,12 @@ alias dump='od -t x1'
 export PATH=$PATH:~/.home/scripts:~/bin
 
 #------------------------------------------------------------------------------
+# Gets more config files out of the home directory. Note however that if unset
+# then this is the default. It is set for the benefit of non-compliant apps.
+
+export XDG_CONFIG_HOME=~/.config
+
+#------------------------------------------------------------------------------
 
 export HISTIGNORE="&:ls:[bf]g:history:exit"
 HISTTIMEFORMAT=$(echo -en '%Y-%m-%d  %T\t')
@@ -22,4 +28,3 @@ PROMPT_COMMAND='history -a'
 shopt -s histappend
 shopt -s cdspell
 shopt -s cmdhist
-

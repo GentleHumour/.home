@@ -1,6 +1,5 @@
-#export JDK_HOME=/opt/jdk1.6.0_21
-#export JDK_HOME=/opt/jdk1.6.0_45
-export JDK_HOME=/opt/jdk1.7.0_25
+# To keep Maven happy compiling Java 17.
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 export PATH=$JDK_HOME/bin:$PATH
 
 #------------------------------------------------------------------------------

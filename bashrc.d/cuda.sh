@@ -1,5 +1,9 @@
-export PATH=/usr/local/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+# For the NVIDIA Official packages:
+#CUDA_VER=11.4
+#export PATH="/usr/local/cuda-$CUDA_VER/bin:$PATH"
+#export LD_LIBRARY_PATH="/usr/local/cuda-$CUDA_VER/lib64:$LD_LIBRARY_PATH"
+#export HOST_COMPILER=cuda-g++
 
-# Keep nvcc happy by using GCC 7.
-export HOST_COMPILER=/opt/gcc-7.3.0/bin/g++-7.3.0
+# For Negativo17:
+export CUDA_PATH=/usr
+export CUDA_SEARCH_PATH=/usr/lib64
