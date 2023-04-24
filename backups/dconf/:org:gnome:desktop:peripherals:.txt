@@ -1,6 +1,6 @@
 [keyboard]
 delay=uint32 324
-numlock-state=false
+numlock-state=true
 repeat-interval=uint32 20
 
 [mouse]

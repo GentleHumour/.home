@@ -33,6 +33,7 @@ pip3 install gnome-extensions-cli
 #    * Interesting, but somewhat confusing.
 
 # Clipboard History: https://extensions.gnome.org/extension/4839/clipboard-history/
+# Pano would be a fancier alternative: https://extensions.gnome.org/extension/5278/pano/
 gext -F install clipboard-history@alexsaveau.dev
 
 # Dash to Panel: https://extensions.gnome.org/extension/1160/dash-to-panel/

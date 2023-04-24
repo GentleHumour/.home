@@ -5,8 +5,8 @@ app-picker-view=uint32 1
 command-history=['restart', 'e', 'lg', '>', 'gnome-session-properties', 'R', 'r']
 disable-user-extensions=false
 disabled-extensions=['burn-my-windows@schneegans.github.com', 'desktop-cube@schneegans.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'aztaskbar@aztaskbar.gitlab.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'no-overview@fthx', 'appindicatorsupport@rgcjonas.gmail.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['openweather-extension@jenslody.de', 'taskicons@tttom64.github.com', 'caffeine@patapon.info', 'dash-to-panel@jderose9.github.com', 'systemMonitor@gnome-shell-extensions.gcampax.github.com', 'pixel-saver@deadalnix.me', 'EasyScreenCast@iacopodeenosee.gmail.com', 'favorites@cvine.org', 'noannoyance@daase.net', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'logomenu@aryan_k', 'background-logo@fedorahosted.org', 'lockkeys@vaina.lt', 'maximus@luis.pabon.auronconsulting.co.uk', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'showLogoutBttn@niko', 'TaskBar@zpydr', 'gnome-shell-screenshot@ttll.de', 'todo.txt@bart.libert.gmail.com', 'CoverflowAltTab@palatis.blogspot.com', 'unite@hardpixel.eu', 'material-shell@papyelgringo', 'just-perfection-desktop@just-perfection', 'RecentItems@bananenfisch.net', 'touchpad-indicator@orangeshirt', 'Applications_Menu@rmy.pobox.com', 'gamemode@christian.kellner.me', 'taskicons@rliang.github.com', 'sensory-perception@HarlemSquirrel.github.io', 'launcher@hedgie.tech', 'show-desktop-button@amivaleo', 'clipboard-history@alexsaveau.dev', 'ssm-gnome@lgiki.net', 'simplenetspeed@biji.extension', 'Vitals@CoreCoding.com', 'horizontal-workspace-indicator@tty2.io', 'maximus-two@wilfinitlike.gmail.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'azclock@azclock.gitlab.com', 'netspeed@hedayaty.gmail.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'weather-extension@xeked.com', 'ding@rastersoft.com', 'extension-list@tu.berry']
-favorite-apps=['firefox.desktop', 'terminator.desktop', 'Nemo.desktop', 'org.gnome.Calculator.desktop', 'Minecraft.desktop', 'steam.desktop', 'PyCharm 2021.1.2.desktop', 'libreoffice-writer.desktop', 'pavucontrol.desktop']
+enabled-extensions=['openweather-extension@jenslody.de', 'taskicons@tttom64.github.com', 'caffeine@patapon.info', 'systemMonitor@gnome-shell-extensions.gcampax.github.com', 'pixel-saver@deadalnix.me', 'EasyScreenCast@iacopodeenosee.gmail.com', 'favorites@cvine.org', 'noannoyance@daase.net', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'lockkeys@vaina.lt', 'maximus@luis.pabon.auronconsulting.co.uk', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'showLogoutBttn@niko', 'TaskBar@zpydr', 'gnome-shell-screenshot@ttll.de', 'todo.txt@bart.libert.gmail.com', 'CoverflowAltTab@palatis.blogspot.com', 'material-shell@papyelgringo', 'RecentItems@bananenfisch.net', 'touchpad-indicator@orangeshirt', 'Applications_Menu@rmy.pobox.com', 'gamemode@christian.kellner.me', 'taskicons@rliang.github.com', 'sensory-perception@HarlemSquirrel.github.io', 'launcher@hedgie.tech', 'clipboard-history@alexsaveau.dev', 'ssm-gnome@lgiki.net', 'simplenetspeed@biji.extension', 'Vitals@CoreCoding.com', 'horizontal-workspace-indicator@tty2.io', 'maximus-two@wilfinitlike.gmail.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'netspeed@hedayaty.gmail.com', 'weather-extension@xeked.com', 'extension-list@tu.berry', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'background-logo@fedorahosted.org', 'dash-to-panel@jderose9.github.com', 'azclock@azclock.gitlab.com', 'ding@rastersoft.com', 'just-perfection-desktop@just-perfection', 'logomenu@aryan_k', 'show-desktop-button@amivaleo', 'unite@hardpixel.eu']
+favorite-apps=['firefox.desktop', 'terminator.desktop', 'Nemo.desktop', 'org.gnome.Calculator.desktop', 'Minecraft.desktop', 'steam.desktop', 'PyCharm 2021.1.2.desktop', 'pavucontrol.desktop']
 had-bluetooth-devices-setup=true
 last-selected-power-profile='power-saver'
 remember-mount-password=false
@@ -121,6 +121,7 @@ matrix-scale=31
 [extensions/caffeine]
 indicator-position-max=4
 show-indicator='always'
+toggle-state=false
 
 [extensions/dash-to-dock]
 apply-custom-theme=true
@@ -220,6 +221,9 @@ widget-position='center'
 
 [extensions/icon-hider]
 known=['activities', 'appMenu', 'dateMenu', 'a11y', 'keyboard', 'aggregateMenu', 'weather', 'recent-items', 'apps-menu', 'netspeed', 'favorites']
+
+[extensions/just-perfection]
+dash=true
 
 [extensions/launcher]
 path='/home/M-Y-S-E-L-F/.local/scripts'
@@ -331,7 +335,9 @@ touchscreen-enabled=false
 trackpoint-enabled=false
 
 [extensions/unite]
+app-menu-max-width=0
 autofocus-windows=false
+desktop-name-text='Desktop'
 enable-titlebar-actions=true
 extend-left-box=false
 greyscale-tray-icons=true
