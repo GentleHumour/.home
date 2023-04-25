@@ -18,7 +18,7 @@ if $CYGWIN; then
   export EDITOR=np
   export APPROOT=/mnt/c/apps
 else
-  export EDITOR=gedit
+  export EDITOR=micro
   export APPROOT=/opt
 fi
 
