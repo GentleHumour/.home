@@ -127,7 +127,7 @@ sudo dnf install -y lame\* --exclude=lame-devel
 sudo dnf group upgrade -y --with-optional Multimedia
 sudo dnf install -y vlc
 
-package ffmpeg mplayer
+package ffmpeg mplayer mpv
 
 #------------------------------------------------------------------------------
 # Enable GUI application metadata in software installation GUIs.
