@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Eclipse C++ 2019-09
+Exec=bash -c "export GDK_BACKEND=x11; bin/eclipse-cpp-2019-09/eclipse/eclipse"
+Icon=${HOME}/bin/eclipse-cpp-2019-09/eclipse/icon.xpm
+Type=Application
+Categories=Development;
