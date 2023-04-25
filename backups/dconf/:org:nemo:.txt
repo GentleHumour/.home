@@ -7,10 +7,25 @@ default-column-order=['name', 'permissions', 'owner', 'group', 'size', 'type', '
 default-visible-columns=['name', 'permissions', 'owner', 'group', 'size', 'type', 'date_modified', 'selinux_context']
 
 [preferences]
+default-folder-viewer='list-view'
 ignore-view-metadata=true
+inherit-folder-viewer=true
 quick-renames-with-pause-in-between=true
+show-advanced-permissions=true
+show-computer-icon-toolbar=true
 show-full-path-titles=true
 show-hidden-files=true
+show-home-icon-toolbar=true
+show-new-folder-icon-toolbar=true
+show-open-in-terminal-toolbar=true
+show-show-thumbnails-toolbar=true
+thumbnail-limit=uint64 10485760
+
+[preferences/menu-config]
+selection-menu-copy-to=true
+selection-menu-duplicate=true
+selection-menu-make-link=true
+selection-menu-move-to=true
 
 [window-state]
 geometry='1717x839+26+23'

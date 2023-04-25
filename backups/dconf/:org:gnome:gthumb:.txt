@@ -88,3 +88,6 @@ background-color='rgb(0,0,0)'
 grid-type='thirds'
 keep-aspect-ratio=true
 resize='crop'
+
+[terminal]
+command='terminator --window --working-directory=%f'
