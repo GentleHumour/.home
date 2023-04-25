@@ -199,6 +199,11 @@ sudo dnf -y groupinstall "Development tools"
 sudo dnf -y install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
 
 #------------------------------------------------------------------------------
+# Embedded systems programming.
+
+package minicom
+
+#------------------------------------------------------------------------------
 # General file utilities.
 
 package terminator micro gedit jq meld

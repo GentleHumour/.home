@@ -1,0 +1,1 @@
+export MINICOM="--color=on"

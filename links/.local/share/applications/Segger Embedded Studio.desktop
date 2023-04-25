@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Segger Embedded Studio
+Exec=bash -c "cd ~/bin/arm_segger_embedded_studio_v550d_linux_x64_nordic/bin/ && ./emStudio"
+Type=Application
+Categories=Development;
