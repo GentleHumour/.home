@@ -1,12 +1,6 @@
 #!/bin/bash
 #------------------------------------------------------------------------------
 # Set up my Fedora system.
-#
-# References:
-#   [1] https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
-#   [2] https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/
-#   [3] https://rpmfusion.org/Howto/NVIDIA
-#   [4] https://www.hackingthehike.com/fedora38-guide/
 #------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -103,7 +97,7 @@ esac
 
 #------------------------------------------------------------------------------
 # RPM Fusion
-# See [1].
+# See: https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
 
 sudo dnf install -y \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
@@ -112,7 +106,7 @@ sudo dnf install -y \
 
 #------------------------------------------------------------------------------
 # Multimedia
-# See [2].
+# See: https://docs.fedoraproject.org/en-US/quick-docs/assembly_installing-plugins-for-playing-movies-and-music/
 #
 # Note: couldn't do the gstreamer plugins unless I specified arch .x86_64.
 # Otherwise I get:
@@ -142,14 +136,14 @@ flatpak install -y flathub com.spotify.Client
 
 #------------------------------------------------------------------------------
 # NVIDIA driver.
-# See [3].
+# See: https://rpmfusion.org/Howto/NVIDIA
 
 sudo dnf install -y akmod-nvidia
 sudo dnf install -y xorg-x11-drv-nvidia-cuda 
 
 #------------------------------------------------------------------------------
 # GUI Desktop.
-# See [4].
+# See: https://www.hackingthehike.com/fedora38-guide/
 
 package gnome-extensions-app gnome-tweaks 
 package gnome-terminal-nautilus
@@ -199,6 +193,26 @@ sudo dnf -y groupinstall "Development tools"
 sudo dnf -y install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
 
 #------------------------------------------------------------------------------
+# VSCode
+# See:
+# * https://code.visualstudio.com/docs/setup/linux
+# * https://computingforgeeks.com/install-visual-studio-code-on-fedora/
+
+if ! rpm -q code >&/dev/null; then
+  sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  cat <<EOF | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+EOF
+  sudo dnf check-update
+  package code
+fi
+
+#------------------------------------------------------------------------------
 # Embedded systems programming.
 
 package minicom
@@ -224,7 +238,7 @@ package steam
 
 #------------------------------------------------------------------------------
 # /etc/fstab: mount external drive by label at predictable location.
-# https://askubuntu.com/questions/14365/mount-an-external-drive-at-boot-time-only-if-it-is-plugged-in
+# See: https://askubuntu.com/questions/14365/mount-an-external-drive-at-boot-time-only-if-it-is-plugged-in
 # Use a 3s timeout for systemd's attempt to mount at boot.
 
 if ! grep -q 'LABEL=external' /etc/fstab; then
