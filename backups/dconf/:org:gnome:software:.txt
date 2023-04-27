@@ -2,7 +2,7 @@
 check-timestamp=int64 1624161891
 download-updates=false
 first-run=false
-flatpak-purge-timestamp=int64 1682395326
+flatpak-purge-timestamp=int64 1682564535
 install-timestamp=int64 1652926332
 online-updates-timestamp=int64 1624189423
 security-timestamp=int64 0
