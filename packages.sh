@@ -115,8 +115,10 @@ sudo dnf install -y \
 #   file /usr/share/doc/gstreamer1-plugins-bad-free/RELEASE from install of gstreamer1-plugins-bad-free-1.22.1-1.fc38.i686 conflicts with file from package gstreamer1-plugins-bad-free-1.22.2-1.fc38.x86_64
 #   file /usr/share/doc/gstreamer1-plugins-good/NEWS from install of gstreamer1-plugins-good-1.22.1-1.fc38.i686 conflicts with file from package gstreamer1-plugins-good-1.22.2-1.fc38.x86_64
 #   file /usr/share/doc/gstreamer1-plugins-good/RELEASE from install of gstreamer1-plugins-good-1.22.1-1.fc38.i686 conflicts with file from package gstreamer1-plugins-good-1.22.2-1.fc38.x86_64
+# Was working, now problematic:
+#sudo dnf install -y --best --allowerasing --skip-broken gstreamer1-plugins-{bad-\*,good-\*,base}.x86_64 --exclude=gstreamer1-plugins-bad-free-devel
 
-sudo dnf install -y --best --allowerasing --skip-broken gstreamer1-plugins-{bad-\*,good-\*,base}.x86_64 --exclude=gstreamer1-plugins-bad-free-devel
+sudo dnf install -y gstreamer1-plugins-{bad-*,good-*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf install -y lame\* --exclude=lame-devel
 sudo dnf group upgrade -y --with-optional Multimedia
 sudo dnf install -y vlc
@@ -145,6 +147,7 @@ sudo dnf install -y xorg-x11-drv-nvidia-cuda
 # GUI Desktop.
 # See: https://www.hackingthehike.com/fedora38-guide/
 
+package nemo
 package gnome-extensions-app gnome-tweaks 
 package gnome-terminal-nautilus
 package conky lm_sensors hddtemp
