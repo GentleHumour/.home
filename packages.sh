@@ -228,6 +228,11 @@ package meld
 package unzip p7zip p7zip-plugins unrar
 
 #------------------------------------------------------------------------------
+# General network utilities.
+
+package telnet
+
+#------------------------------------------------------------------------------
 # Image and video manipulation.
 
 package gthumb gimp inkscape
