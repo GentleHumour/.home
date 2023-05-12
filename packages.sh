@@ -178,6 +178,7 @@ sudo dnf install -y python3-pip
 #------------------------------------------------------------------------------
 # Minecraft and Java programming.
 
+package mumble mumble-overlay
 package java-1.8.0-openjdk-devel
 package java-17-openjdk-devel
 package java-latest-openjdk-devel
@@ -243,6 +244,13 @@ package obs-studio
 
 sudo dnf config-manager --set-enabled rpmfusion-nonfree-steam
 package steam
+
+#------------------------------------------------------------------------------
+# VirtualBox
+
+package VirtualBox
+sudo usermod -aG vboxusers david
+sudo usermod -aG vboxusers dsilver
 
 #------------------------------------------------------------------------------
 # /etc/fstab: mount external drive by label at predictable location.
