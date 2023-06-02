@@ -1,5 +1,13 @@
 {
-    "colorscheme": "twilight",
+    "*.hpp,*.cpp": {
+        "tabsize": 4
+    },
+    "*.sh": {
+        "colorscheme": "oldskool-shell",
+        "tabsize": 2
+    },
+    "colorcolumn": 80,
+    "colorscheme": "oldskool-shell",
     "eofnewline": false,
     "fastdirty": true,
     "hidehelp": false,
