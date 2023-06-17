@@ -224,20 +224,22 @@ package minicom
 #------------------------------------------------------------------------------
 # General file utilities.
 
-package terminator micro gedit jq meld
-package meld
+package terminator micro gedit
+package jq meld hexyl
 package unzip p7zip p7zip-plugins unrar
 
 #------------------------------------------------------------------------------
 # General network utilities.
 
 package telnet
+package wireshark
 
 #------------------------------------------------------------------------------
 # Image and video manipulation.
 
-package gthumb gimp inkscape
+package gthumb gimp
 package obs-studio
+package dia inkscape libreoffice-draw
 
 #------------------------------------------------------------------------------
 # Steam.
