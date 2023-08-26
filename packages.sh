@@ -150,7 +150,7 @@ sudo dnf install -y xorg-x11-drv-nvidia-cuda
 package nemo
 package gnome-extensions-app gnome-tweaks 
 package gnome-terminal-nautilus
-package conky lm_sensors hddtemp
+package conky lm_sensors hddtemp gnome-power-manager
 package curl cabextract xorg-x11-font-utils fontconfig
 sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 package dconf-editor
@@ -194,7 +194,9 @@ package clojure-maven-plugin
 # C/C++ programming.
 
 sudo dnf -y groupinstall "Development tools"
-sudo dnf -y install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
+sudo dnf -y install gcc-c++ libstdc++-devel boost-devel zig
+sudo dnf -y install binutils gcc make patch libgomp glibc-headers glibc-devel 
+sudo dnf -y install kernel-headers kernel-devel dkms
 
 #------------------------------------------------------------------------------
 # VSCode
