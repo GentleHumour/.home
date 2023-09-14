@@ -97,7 +97,7 @@ esac
 
 #------------------------------------------------------------------------------
 # RPM Fusion
-# See: https://docs.fedoraproject.org/en-US/quick-docs/setup_rpmfusion/
+# See: https://docs.fedoraproject.org/en-US/quick-docs/rpmfusion-setup/
 
 sudo dnf install -y \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm

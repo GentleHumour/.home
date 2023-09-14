@@ -5,3 +5,5 @@
 workon() {
     . ~/.virtualenvs/"$1"/bin/activate
 }
+
+alias venv='python3 -m venv .env'
