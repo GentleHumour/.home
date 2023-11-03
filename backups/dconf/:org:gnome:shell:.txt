@@ -5,7 +5,7 @@ app-picker-view=uint32 1
 command-history=['restart', 'e', 'lg', '>', 'gnome-session-properties', 'R', 'r']
 disable-user-extensions=false
 disabled-extensions=['burn-my-windows@schneegans.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'aztaskbar@aztaskbar.gitlab.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'no-overview@fthx', 'appindicatorsupport@rgcjonas.gmail.com', 'azclock@azclock.gitlab.com', 'background-logo@fedorahosted.org', 'desktop-cube@schneegans.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com']
-enabled-extensions=['openweather-extension@jenslody.de', 'taskicons@tttom64.github.com', 'caffeine@patapon.info', 'systemMonitor@gnome-shell-extensions.gcampax.github.com', 'pixel-saver@deadalnix.me', 'EasyScreenCast@iacopodeenosee.gmail.com', 'favorites@cvine.org', 'noannoyance@daase.net', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'lockkeys@vaina.lt', 'maximus@luis.pabon.auronconsulting.co.uk', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'showLogoutBttn@niko', 'TaskBar@zpydr', 'gnome-shell-screenshot@ttll.de', 'todo.txt@bart.libert.gmail.com', 'CoverflowAltTab@palatis.blogspot.com', 'material-shell@papyelgringo', 'RecentItems@bananenfisch.net', 'touchpad-indicator@orangeshirt', 'Applications_Menu@rmy.pobox.com', 'gamemode@christian.kellner.me', 'taskicons@rliang.github.com', 'sensory-perception@HarlemSquirrel.github.io', 'launcher@hedgie.tech', 'clipboard-history@alexsaveau.dev', 'ssm-gnome@lgiki.net', 'simplenetspeed@biji.extension', 'Vitals@CoreCoding.com', 'horizontal-workspace-indicator@tty2.io', 'maximus-two@wilfinitlike.gmail.com', 'netspeed@hedayaty.gmail.com', 'weather-extension@xeked.com', 'extension-list@tu.berry', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'just-perfection-desktop@just-perfection', 'logomenu@aryan_k', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'show-desktop-button@amivaleo', 'dash-to-panel@jderose9.github.com']
+enabled-extensions=['openweather-extension@jenslody.de', 'taskicons@tttom64.github.com', 'caffeine@patapon.info', 'systemMonitor@gnome-shell-extensions.gcampax.github.com', 'pixel-saver@deadalnix.me', 'favorites@cvine.org', 'noannoyance@daase.net', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'maximus@luis.pabon.auronconsulting.co.uk', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'showLogoutBttn@niko', 'TaskBar@zpydr', 'gnome-shell-screenshot@ttll.de', 'CoverflowAltTab@palatis.blogspot.com', 'material-shell@papyelgringo', 'RecentItems@bananenfisch.net', 'touchpad-indicator@orangeshirt', 'Applications_Menu@rmy.pobox.com', 'gamemode@christian.kellner.me', 'taskicons@rliang.github.com', 'sensory-perception@HarlemSquirrel.github.io', 'launcher@hedgie.tech', 'ssm-gnome@lgiki.net', 'simplenetspeed@biji.extension', 'horizontal-workspace-indicator@tty2.io', 'maximus-two@wilfinitlike.gmail.com', 'netspeed@hedayaty.gmail.com', 'weather-extension@xeked.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'logomenu@aryan_k', 'ding@rastersoft.com', 'dash-to-panel@jderose9.github.com', 'show-desktop-button@amivaleo', 'unite@hardpixel.eu', 'clipboard-history@alexsaveau.dev', 'Vitals@CoreCoding.com', 'just-perfection-desktop@just-perfection', 'todo.txt@bart.libert.gmail.com', 'lockkeys@vaina.lt', 'extension-list@tu.berry', 'EasyScreenCast@iacopodeenosee.gmail.com']
 favorite-apps=['firefox.desktop', 'terminator.desktop', 'Nemo.desktop', 'org.gnome.Calculator.desktop', 'code.desktop', 'Minecraft.desktop', 'steam.desktop', 'PyCharm 2021.1.2.desktop', 'pavucontrol.desktop']
 had-bluetooth-devices-setup=true
 last-selected-power-profile='power-saver'
@@ -119,8 +119,11 @@ matrix-randomness=0.14000000000000001
 matrix-scale=31
 
 [extensions/caffeine]
-indicator-position-max=3
+indicator-position-max=2
 show-indicator='always'
+
+[extensions/clipboard-history]
+notify-on-copy=true
 
 [extensions/dash-to-dock]
 apply-custom-theme=true
@@ -131,13 +134,73 @@ scroll-switch-workspace-whole=false
 
 [extensions/dash-to-panel]
 animate-appicon-hover=true
-animate-appicon-hover-animation-convexity={'RIPPLE': 2.0, 'PLANK': 0.59999999999999998}
+animate-appicon-hover-animation-convexity={'RIPPLE': 2.0, 'PLANK': 1.0, 'SIMPLE': 0.0}
 animate-appicon-hover-animation-duration={'SIMPLE': uint32 160, 'RIPPLE': 130, 'PLANK': 100}
-animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4}
+animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
 animate-appicon-hover-animation-rotation={'SIMPLE': 0, 'RIPPLE': 10, 'PLANK': 0}
 animate-appicon-hover-animation-travel={'SIMPLE': 0.29999999999999999, 'RIPPLE': 0.40000000000000002, 'PLANK': 0.0}
 animate-appicon-hover-animation-type='PLANK'
 animate-appicon-hover-animation-zoom={'SIMPLE': 1.0, 'RIPPLE': 1.25, 'PLANK': 2.0}
+app-ctrl-hotkey-1=['<Control><Super>1']
+app-ctrl-hotkey-10=['<Control><Super>0']
+app-ctrl-hotkey-2=['<Control><Super>2']
+app-ctrl-hotkey-3=['<Control><Super>3']
+app-ctrl-hotkey-4=['<Control><Super>4']
+app-ctrl-hotkey-5=['<Control><Super>5']
+app-ctrl-hotkey-6=['<Control><Super>6']
+app-ctrl-hotkey-7=['<Control><Super>7']
+app-ctrl-hotkey-8=['<Control><Super>8']
+app-ctrl-hotkey-9=['<Control><Super>9']
+app-ctrl-hotkey-kp-1=['<Control><Super>KP_1']
+app-ctrl-hotkey-kp-10=['<Control><Super>KP_0']
+app-ctrl-hotkey-kp-2=['<Control><Super>KP_2']
+app-ctrl-hotkey-kp-3=['<Control><Super>KP_3']
+app-ctrl-hotkey-kp-4=['<Control><Super>KP_4']
+app-ctrl-hotkey-kp-5=['<Control><Super>KP_5']
+app-ctrl-hotkey-kp-6=['<Control><Super>KP_6']
+app-ctrl-hotkey-kp-7=['<Control><Super>KP_7']
+app-ctrl-hotkey-kp-8=['<Control><Super>KP_8']
+app-ctrl-hotkey-kp-9=['<Control><Super>KP_9']
+app-hotkey-1=['<Super>1']
+app-hotkey-10=['<Super>0']
+app-hotkey-2=['<Super>2']
+app-hotkey-3=['<Super>3']
+app-hotkey-4=['<Super>4']
+app-hotkey-5=['<Super>5']
+app-hotkey-6=['<Super>6']
+app-hotkey-7=['<Super>7']
+app-hotkey-8=['<Super>8']
+app-hotkey-9=['<Super>9']
+app-hotkey-kp-1=['<Super>KP_1']
+app-hotkey-kp-10=['<Super>KP_0']
+app-hotkey-kp-2=['<Super>KP_2']
+app-hotkey-kp-3=['<Super>KP_3']
+app-hotkey-kp-4=['<Super>KP_4']
+app-hotkey-kp-5=['<Super>KP_5']
+app-hotkey-kp-6=['<Super>KP_6']
+app-hotkey-kp-7=['<Super>KP_7']
+app-hotkey-kp-8=['<Super>KP_8']
+app-hotkey-kp-9=['<Super>KP_9']
+app-shift-hotkey-1=['<Shift><Super>1']
+app-shift-hotkey-10=['<Shift><Super>0']
+app-shift-hotkey-2=['<Shift><Super>2']
+app-shift-hotkey-3=['<Shift><Super>3']
+app-shift-hotkey-4=['<Shift><Super>4']
+app-shift-hotkey-5=['<Shift><Super>5']
+app-shift-hotkey-6=['<Shift><Super>6']
+app-shift-hotkey-7=['<Shift><Super>7']
+app-shift-hotkey-8=['<Shift><Super>8']
+app-shift-hotkey-9=['<Shift><Super>9']
+app-shift-hotkey-kp-1=['<Shift><Super>KP_1']
+app-shift-hotkey-kp-10=['<Shift><Super>KP_0']
+app-shift-hotkey-kp-2=['<Shift><Super>KP_2']
+app-shift-hotkey-kp-3=['<Shift><Super>KP_3']
+app-shift-hotkey-kp-4=['<Shift><Super>KP_4']
+app-shift-hotkey-kp-5=['<Shift><Super>KP_5']
+app-shift-hotkey-kp-6=['<Shift><Super>KP_6']
+app-shift-hotkey-kp-7=['<Shift><Super>KP_7']
+app-shift-hotkey-kp-8=['<Shift><Super>KP_8']
+app-shift-hotkey-kp-9=['<Shift><Super>KP_9']
 appicon-margin=0
 appicon-padding=4
 available-monitors=[1, 0]
@@ -157,17 +220,19 @@ hide-overview-on-startup=true
 hot-keys=true
 hotkeys-overlay-combo='TEMPORARILY'
 intellihide=false
+intellihide-key-toggle=['<Super>i']
 leftbox-padding=-1
 multi-monitors=false
 overview-click-to-exit=false
 panel-anchors='{"0":"MIDDLE","1":"MIDDLE"}'
-panel-element-positions='{"0":[{"element":"showAppsButton","visible":false,"position":"centered"},{"element":"desktopButton","visible":false,"position":"stackedBR"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"dateMenu","visible":true,"position":"centered"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"}]}'
+panel-element-positions='{"0":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"dateMenu","visible":true,"position":"centered"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedTL"}],"1":[{"element":"showAppsButton","visible":true,"position":"stackedTL"},{"element":"activitiesButton","visible":false,"position":"stackedTL"},{"element":"leftBox","visible":true,"position":"stackedTL"},{"element":"taskbar","visible":true,"position":"stackedTL"},{"element":"dateMenu","visible":true,"position":"centered"},{"element":"centerBox","visible":true,"position":"stackedBR"},{"element":"rightBox","visible":true,"position":"stackedBR"},{"element":"systemMenu","visible":true,"position":"stackedBR"},{"element":"desktopButton","visible":true,"position":"stackedTL"}]}'
 panel-lengths='{"0":100,"1":100}'
 panel-positions='{"0":"TOP","1":"TOP"}'
 panel-sizes='{"0":24,"1":24}'
 primary-monitor=1
 progress-show-count=true
 secondarymenu-contains-showdetails=true
+shortcut=['<Super>q']
 show-appmenu=false
 show-apps-icon-file=''
 show-apps-icon-side-padding=8
@@ -180,9 +245,10 @@ show-showdesktop-time=300
 showdesktop-button-width=8
 status-icon-padding=4
 stockgs-keep-dash=true
+stockgs-keep-top-panel=false
 trans-use-custom-opacity=false
 trans-use-dynamic-opacity=false
-tray-padding=4
+tray-padding=2
 window-preview-title-position='TOP'
 
 [extensions/desktop-cube]
@@ -223,7 +289,10 @@ widget-position='center'
 known=['activities', 'appMenu', 'dateMenu', 'a11y', 'keyboard', 'aggregateMenu', 'weather', 'recent-items', 'apps-menu', 'netspeed', 'favorites']
 
 [extensions/just-perfection]
+clock-menu-position-offset=0
 dash=true
+notification-banner-position=1
+theme=true
 
 [extensions/launcher]
 path='/home/M-Y-S-E-L-F/.local/scripts'
@@ -349,6 +418,7 @@ reduce-panel-spacing=true
 show-legacy-tray=true
 show-window-buttons='always'
 show-window-title='both'
+window-buttons-placement='left'
 window-buttons-theme='materia'
 
 [extensions/user-theme]
@@ -360,7 +430,7 @@ fixed-widths=true
 hide-icons=false
 hot-sensors=['__network-rx_max__', '_processor_usage_', '_temperature_processor_0_']
 include-static-info=false
-position-in-panel=2
+position-in-panel=4
 show-battery=false
 show-fan=false
 show-system=false
