@@ -5,7 +5,8 @@ repeat-interval=uint32 20
 
 [mouse]
 double-click=400
-speed=-0.55147058823529416
+natural-scroll=false
+speed=-0.53125
 
 [touchpad]
 send-events='disabled'

@@ -7,6 +7,7 @@ enable-animations=true
 enable-hot-corners=true
 font-antialiasing='grayscale'
 font-hinting='slight'
+gtk-enable-primary-paste=false
 gtk-theme='Adwaita-dark'
 icon-theme='Adwaita'
 locate-pointer=false

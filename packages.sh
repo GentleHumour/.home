@@ -156,6 +156,11 @@ sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore
 package dconf-editor
 
 #------------------------------------------------------------------------------
+# Logitech Mouse.
+
+package piper
+
+#------------------------------------------------------------------------------
 # Remove and install Gnome extension system packages.
 
 sudo dnf remove -y \
