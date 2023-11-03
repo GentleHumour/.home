@@ -123,7 +123,7 @@ indicator-position-max=2
 show-indicator='always'
 
 [extensions/clipboard-history]
-notify-on-copy=true
+notify-on-copy=false
 
 [extensions/dash-to-dock]
 apply-custom-theme=true
