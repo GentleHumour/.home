@@ -45,7 +45,7 @@ gext -F install dash-to-panel@jderose9.github.com
 
 # Desktop Clock: https://extensions.gnome.org/extension/5156/desktop-clock/
 # * Good example for implementing Conky alternative ("Desktop Web View").
-gext -F install azclock@azclock.gitlab.com
+#gext -F install azclock@azclock.gitlab.com
 
 # Desktop Cube: https://extensions.gnome.org/extension/4648/desktop-cube/
 # * Like Compiz, but no way to rotate with Unite and Desktop Icons instealled.
@@ -62,7 +62,7 @@ echo "Please install Extension List through the GNOME website: https://extension
 
 # Logo Menu: https://extensions.gnome.org/extension/4451/logo-menu/
 # * Distro logo and drop down menu on the panel.
-gext -F install logomenu@aryan_k
+#gext -F install logomenu@aryan_k
 
 # Show Desktop Button: https://extensions.gnome.org/extension/1194/show-desktop-button/
 gext -F install show-desktop-button@amivaleo
@@ -85,7 +85,7 @@ gext -F install Vitals@CoreCoding.com
 
 # Workspace Indicator: https://extensions.gnome.org/extension/21/workspace-indicator/
 # * Beware the inferior extension of the same name.
-gext -F install workspace-indicator@gnome-shell-extensions.gcampax.github.com
+#gext -F install workspace-indicator@gnome-shell-extensions.gcampax.github.com
 
 #------------------------------------------------------------------------------
 # Restore extension settings from backups.
