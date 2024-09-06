@@ -8,7 +8,7 @@
 
 log() {
   local STATUS="$1"
-  printf "[%-6s]\t" "$STATUS" 
+  printf "[%-6s]\t" "$STATUS"
   shift
   echo "$@"
 }
@@ -70,7 +70,7 @@ set_group_to_users() {
     local USERS_GID=$(getent group users | awk -F: '{ print $3; }')
     # Look up numeric GID of affected user.
     local AFFECTED_GID=$(awk <<<$AFFECTED_ENT -F: '{print $4}')
-    
+
     if [ $AFFECTED_GID -ne $USERS_GID ]; then
       echo "Changing primary GID of $AFFECTED to $USERS_GID (users)."
       echo "This can take a few seconds as files under /home/$AFFECTED are changed."
@@ -141,14 +141,14 @@ flatpak install -y flathub com.spotify.Client
 # See: https://rpmfusion.org/Howto/NVIDIA
 
 sudo dnf install -y akmod-nvidia
-sudo dnf install -y xorg-x11-drv-nvidia-cuda 
+sudo dnf install -y xorg-x11-drv-nvidia-cuda
 
 #------------------------------------------------------------------------------
 # GUI Desktop.
 # See: https://www.hackingthehike.com/fedora38-guide/
 
 package nemo
-package gnome-extensions-app gnome-tweaks 
+package gnome-extensions-app gnome-tweaks
 package gnome-terminal-nautilus
 package conky lm_sensors hddtemp gnome-power-manager
 package curl cabextract xorg-x11-font-utils fontconfig
@@ -169,7 +169,7 @@ sudo dnf remove -y \
 
 # Restore overzealously removed dependencies of those.
 package gnome-shell-extension-apps-menu
-package gnome-shell-extension-launch-new-instance  
+package gnome-shell-extension-launch-new-instance
 
 package gnome-shell-extension-caffeine
 package gnome-shell-extension-just-perfection
@@ -192,7 +192,7 @@ package maven
 #------------------------------------------------------------------------------
 # Clojure.
 
-package clojure clojure-core-specs-alpha clojure-spec-alpha 
+package clojure clojure-core-specs-alpha clojure-spec-alpha
 package clojure-maven-plugin
 
 #------------------------------------------------------------------------------
@@ -200,7 +200,7 @@ package clojure-maven-plugin
 
 sudo dnf -y groupinstall "Development tools"
 sudo dnf -y install gcc-c++ libstdc++-devel boost-devel zig
-sudo dnf -y install binutils gcc make patch libgomp glibc-headers glibc-devel 
+sudo dnf -y install binutils gcc make patch libgomp glibc-headers glibc-devel
 sudo dnf -y install kernel-headers kernel-devel dkms
 
 #------------------------------------------------------------------------------
@@ -236,15 +236,25 @@ package jq meld hexyl
 package unzip p7zip p7zip-plugins unrar
 
 #------------------------------------------------------------------------------
+# Scripting.
+
+package desed
+
+#------------------------------------------------------------------------------
 # General network utilities.
 
 package telnet
 package wireshark
 
 #------------------------------------------------------------------------------
+# Containers.
+
+package podman-docker docker-compose
+
+#------------------------------------------------------------------------------
 # Image and video manipulation.
 
-package gthumb gimp
+package gthumb gimp jhead
 package obs-studio
 package dia inkscape libreoffice-draw
 
