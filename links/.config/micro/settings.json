@@ -2,21 +2,23 @@
     "*.hpp,*.cpp": {
         "tabsize": 4
     },
+    "*.py": {
+        "tabsize": 4
+    },
     "*.sh": {
         "colorscheme": "oldskool-shell",
         "tabsize": 2
     },
+    "[mM]akefile": {
+        "colorscheme": "oldskool-shell",
+        "tabstospaces": false
+    },
     "colorcolumn": 80,
     "colorscheme": "oldskool-shell",
-    "eofnewline": false,
-    "fastdirty": true,
-    "hidehelp": false,
-    "linter": false,
-    "matchbrace": false,
-    "matchbraceleft": false,
+    "hltaberrors": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
     ],
-    "pluginrepos": [],
-    "termtitle": false
+    "rmtrailingws": true,
+    "tabstospaces": true
 }
