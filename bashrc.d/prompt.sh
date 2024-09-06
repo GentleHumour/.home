@@ -102,7 +102,7 @@ prompt_command()
       local FG="$FG_RED"
       local BG="$BG_RED"
     fi
-    export PS1="\e]2;\u@\h \t \w\a${BG}${ESC_BOLD}${FG_WHT}  \u @ \h  ${FG}${BG_DCY}${RTRI}${FG_WHT}  \t  ${FG_DCY}${BG_PUR}${RTRI}${FG_WHT}  \w${ESC_CLREOL}${ESC_RESET}\n${RTRI} "
+    export PS1="\e]2;\u@\h \t \w\a${BG}${ESC_BOLD}${FG_WHT}  \u @ \h  ${FG}${BG_DCY}${RTRI}${FG_WHT}  \t  ${FG_DCY}${BG_PUR}${RTRI}${FG_WHT}  \w${ESC_CLREOL}${ESC_RESET}\n$ "
   fi
 }
 
