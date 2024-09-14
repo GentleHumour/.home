@@ -8,5 +8,7 @@
     "Ctrl-e": "EndOfLine",
     "Ctrl-r": "CommandMode",
     "Ctrl-G": "command-edit:replace",
-    "CtrlUnderscore": "lua:comment.comment"
+    "CtrlUnderscore": "lua:comment.comment",
+    "Alt-w": "command:set wordwrap off,command:set softwrap off",
+    "Alt-W": "command:set wordwrap on,command:set softwrap on"
 }
