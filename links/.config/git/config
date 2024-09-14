@@ -1,0 +1,30 @@
+[user]
+	name = unspecified
+	email =
+[core]
+	editor = micro
+	excludesfile = /home/david/.config/git/ignore
+[color]
+	ui = true
+[alias]
+    la = log --all --graph --oneline --decorate
+	lg = log --color --graph --all --full-history --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset'
+    lgb = log --graph --abbrev-commit --date=relative --right-only --boundary --oneline upstream/master...$1
+
+[push]
+	default = simple
+[gui]
+	recentrepo = /home/david/projects/plugins/EasyRider
+	editor = micro
+
+
+# https://stackoverflow.com/questions/34119866/setting-up-and-using-meld-as-your-git-difftool-and-mergetool
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+
+[init]
+	defaultBranch = main
