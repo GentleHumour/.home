@@ -252,11 +252,11 @@ package wireshark
 package podman-docker docker-compose
 
 #------------------------------------------------------------------------------
-# Image and video manipulation.
+# Image, video, diagram and document manipulation.
 
 package gthumb gimp jhead
 package obs-studio
-package dia inkscape libreoffice-draw
+package dia inkscape libreoffice-draw pandoc
 
 #------------------------------------------------------------------------------
 # Steam.
