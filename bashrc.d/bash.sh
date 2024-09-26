@@ -27,7 +27,6 @@ HISTCONTROL=ignorespace
 
 # Make history append to the history file immediately to support multiple
 # open terminals.
-PROMPT_COMMAND='history -a'
 shopt -s histappend
 shopt -s cdspell
 shopt -s cmdhist
