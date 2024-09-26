@@ -3,11 +3,12 @@
 alias ls='ls --color=auto -F'
 alias la='ls --color=auto -la'
 alias dump='od -t x1'
+alias hgrep='history | grep'
 
 #------------------------------------------------------------------------------
 # Set up PATH
 
-export PATH=$PATH:~/.home/scripts:~/bin
+export PATH=~/.home/scripts:~/.local/bin:~/bin:$PATH
 
 #------------------------------------------------------------------------------
 # Gets more config files out of the home directory. Note however that if unset
@@ -16,15 +17,21 @@ export PATH=$PATH:~/.home/scripts:~/bin
 export XDG_CONFIG_HOME=~/.config
 
 #------------------------------------------------------------------------------
+# History related settings.
 
-export HISTIGNORE="&:ls:[bf]g:history:exit"
+HISTIGNORE='&:ls:[bf]g:history*:exit'
 HISTTIMEFORMAT=$(echo -en '%Y-%m-%d  %T\t')
-HISTFILESIZE=100000
-HISTSIZE=100000
-PROMPT_COMMAND='history -a'
+HISTFILESIZE=200000
+HISTSIZE=200000
+HISTCONTROL=ignorespace
 
 # Make history append to the history file immediately to support multiple
 # open terminals.
+PROMPT_COMMAND='history -a'
 shopt -s histappend
 shopt -s cdspell
 shopt -s cmdhist
+
+#------------------------------------------------------------------------------
+
+umask 002
