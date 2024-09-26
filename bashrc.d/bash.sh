@@ -1,8 +1,9 @@
 #------------------------------------------------------------------------------
+# Aliases.
 
 alias ls='ls --color=auto -F'
 alias la='ls --color=auto -la'
-alias dump='od -t x1'
+alias dump='hexdump -C'
 alias hgrep='history | grep'
 
 #------------------------------------------------------------------------------
