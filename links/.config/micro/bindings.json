@@ -1,15 +1,17 @@
 {
     "Alt-/": "lua:comment.comment",
+    "Alt-W": "command:set wordwrap on,command:set softwrap on",
     "Alt-a": "SelectAll",
-    "OldBackspace": "DeleteWordLeft",
-    "Ctrl-W": "DeleteWordLeft",
+    "Alt-h": "command:hsplit",
+    "Alt-r": "ToggleRuler",
+    "Alt-v": "command:vsplit",
+    "Alt-w": "command:set wordwrap off,command:set softwrap off",
     "Ctrl-Delete": "DeleteWordRight",
+    "Ctrl-g": "ToggleHelp",
     "Ctrl-Shift-a": "SelectAll",
     "Ctrl-a": "StartOfLine",
     "Ctrl-e": "EndOfLine",
     "Ctrl-r": "CommandMode",
-    "Ctrl-G": "command-edit:replace",
     "CtrlUnderscore": "lua:comment.comment",
-    "Alt-w": "command:set wordwrap off,command:set softwrap off",
-    "Alt-W": "command:set wordwrap on,command:set softwrap on"
+    "OldBackspace": "DeleteWordLeft"
 }
