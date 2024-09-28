@@ -1,8 +1,9 @@
 {
     "Alt-/": "lua:comment.comment",
     "Alt-a": "SelectAll",
-    "Ctrl-H": "DeleteWordLeft",
+    "OldBackspace": "DeleteWordLeft",
     "Ctrl-W": "DeleteWordLeft",
+    "Ctrl-Delete": "DeleteWordRight",
     "Ctrl-Shift-a": "SelectAll",
     "Ctrl-a": "StartOfLine",
     "Ctrl-e": "EndOfLine",
