@@ -131,6 +131,11 @@ package ffmpeg mplayer mpv
 sudo dnf -y group update core
 
 #------------------------------------------------------------------------------
+# Support for HEIF images (superset of Apple's HEIC format).
+
+package libheif libheif-tools libheif-freeworld
+
+#------------------------------------------------------------------------------
 # Audio and music.
 
 package pavucontrol soundconverter audacity
@@ -231,7 +236,8 @@ package minicom
 #------------------------------------------------------------------------------
 # General file utilities.
 
-package terminator micro gedit
+package micro xclip wl-clipboard
+package terminator gedit
 package jq meld hexyl
 package unzip p7zip p7zip-plugins unrar
 
