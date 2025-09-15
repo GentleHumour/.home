@@ -20,5 +20,7 @@
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
     ],
     "rmtrailingws": true,
-    "tabstospaces": true
+    "softwrap": true,
+    "tabstospaces": true,
+    "wordwrap": true
 }
