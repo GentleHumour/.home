@@ -1,10 +1,7 @@
 [Desktop Entry]
-Type=Application
-Exec=bash -c "sleep 5 && DISPLAY=:0 /usr/bin/conky"
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true
-Name[en_AU]=Conky
 Name=Conky
-Comment[en_AU]=
+Name[en_AU]=Conky
 Comment=
+Comment[en_AU]=
+Type=Application
+Exec=bash -c "nohup /usr/bin/conky --daemonize --window-id=600009 --pause=20 >& ~/.cache/conky.log &"
