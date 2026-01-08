@@ -1,3 +1,3 @@
 GRADLE_VERSION=6.2.1
 GRADLE_HOME=/opt/gradle/gradle-$GRADLE_VERSION
-export PATH=$GRADLE_HOME/bin:$PATH
+addpath "$GRADLE_HOME/bin"

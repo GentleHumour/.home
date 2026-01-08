@@ -1,2 +1,1 @@
-export PATH=/opt/patch-2.7/bin:$PATH
-
+addpath "/opt/patch-2.7/bin"

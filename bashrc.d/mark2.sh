@@ -1,2 +1,1 @@
-export PATH=$PATH:~/projects/plugins/mark2
-
+addpath "$HOME/projects/plugins/mark2"

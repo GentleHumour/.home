@@ -1,13 +1,33 @@
 #------------------------------------------------------------------------------
+# Add "$1" to "$PATH" if not already present. If "$2" is 'after', then add "$1"
+# to the end of "$PATH", otherwise add "$1" to the start of "$PATH".
+
+addpath() {
+  # If the path is a compat symlink, do nothing.
+  [ -h "$1" ] && return
+
+  case ":${PATH}:" in
+    *:"$1":*)
+      ;;
+    *)
+      if [ "$2" = "after" ]; then
+        PATH=$PATH:$1
+      else
+        PATH=$1:$PATH
+      fi
+  esac
+}
+
+#------------------------------------------------------------------------------
 # Run optional setup scripts.
 #
-# On some Windows setups, $HOME == "C:\Documents and Settings\username" 
-# which is tricky to quote, so use pushd to finesse it away.  Test exit 
+# On some Windows setups, $HOME == "C:\Documents and Settings\username"
+# which is tricky to quote, so use pushd to finesse it away.  Test exit
 # code of pushd to see whether ~/.bashrc.d/ exists.
 
 if pushd "$HOME"/.home/bashrc.d >& /dev/null; then
   # If .home/bashrc.d/ is empty, ls will complain, so send stderr to /dev/null.
-  for f in `ls *.sh 2>/dev/null`; do 
+  for f in `ls *.sh 2>/dev/null`; do
     . $f
   done
   popd >& /dev/null

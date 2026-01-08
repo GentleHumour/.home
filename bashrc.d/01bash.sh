@@ -9,7 +9,9 @@ alias hgrep='history | grep'
 #------------------------------------------------------------------------------
 # Set up PATH
 
-export PATH=~/.home/scripts:~/.local/bin:~/bin:$PATH
+addpath ~/.home/scripts
+addpath ~/.local/bin
+addpath ~/bin
 
 #------------------------------------------------------------------------------
 # Gets more config files out of the home directory. Note however that if unset

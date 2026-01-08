@@ -1,6 +1,6 @@
 # For the NVIDIA Official packages:
 #CUDA_VER=11.4
-#export PATH="/usr/local/cuda-$CUDA_VER/bin:$PATH"
+#addpath "/usr/local/cuda-$CUDA_VER/bin"
 #export LD_LIBRARY_PATH="/usr/local/cuda-$CUDA_VER/lib64:$LD_LIBRARY_PATH"
 #export HOST_COMPILER=cuda-g++
 

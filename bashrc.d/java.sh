@@ -1,6 +1,8 @@
 # To keep Maven happy compiling Java 17.
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
-export PATH=$JDK_HOME/bin:$PATH
+if [ "$JDK_HOME" != "" ]; then
+  addpath "$JDK_HOME/bin"
+fi
 
 #------------------------------------------------------------------------------
 # Convert Cp1252 (Windows) encoding to UTF-8.
@@ -8,14 +10,13 @@ export PATH=$JDK_HOME/bin:$PATH
 # An alternative way with Maven is to tell it to expect the Windows encoding:
 #   export JAVA_TOOL_OPTIONS='-Dfile.encoding=Cp1252'
 
-win-to-utf8()
-{
+win-to-utf8() {
   if [ $# -eq 0 ]; then
     echo >&2 "ERROR: usage $0 <file>"
     false
     return
   fi
-  
+
   for f in "$@"; do
     if [ -r "$f".Cp1252 ]; then
       echo "$f.Cp1252 exists; probably already converted. Skipping."
