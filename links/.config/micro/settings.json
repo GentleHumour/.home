@@ -13,14 +13,16 @@
         "colorscheme": "oldskool-shell",
         "tabstospaces": false
     },
+    "clipboard": "external",
     "colorcolumn": 80,
     "colorscheme": "oldskool-shell",
     "hltaberrors": true,
+    "hltrailingws": true,
     "pluginchannels": [
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
     ],
     "rmtrailingws": true,
+    "showchars": "tab=\u003e,space= ,itab=|\u003e,ispace=|",
     "softwrap": true,
-    "tabstospaces": true,
     "wordwrap": true
 }
