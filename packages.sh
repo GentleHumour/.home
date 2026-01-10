@@ -235,8 +235,9 @@ package minicom
 
 #------------------------------------------------------------------------------
 # General file utilities.
+# Don't install wl-clipboard; it confuses micro's cut and paste in v2.0.15.
 
-package micro xclip wl-clipboard
+package micro xclip
 package terminator gedit
 package jq meld hexyl
 package unzip p7zip p7zip-plugins unrar
