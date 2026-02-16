@@ -272,11 +272,13 @@ sudo dnf config-manager --set-enabled rpmfusion-nonfree-steam
 package steam
 
 #------------------------------------------------------------------------------
-# VirtualBox
+# Virtualisation.
 
-package VirtualBox
+package VirtualBox qemu libvirt-client
 sudo usermod -aG vboxusers david
 sudo usermod -aG vboxusers dsilver
+sudo usermod -aG libvirt david
+sudo usermod -aG libvirt dsilver
 
 #------------------------------------------------------------------------------
 # /etc/fstab: mount external drive by label at predictable location.
